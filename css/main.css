@@ -1797,23 +1797,23 @@ footer {
   position: relative;
   width: 100%;
   overflow: hidden;
-}
-footer .pattern {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
-@media (max-width: 993px) {
-  footer .pattern {
-    width: auto;
-    height: 400px;
-    right: auto;
-    left: 0;
-  }
+  background-repeat: no-repeat;
+  animation: slidein 100s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
+@keyframes slidein {
+  from {
+    background-position: bottom;
+    background-size: 3000px 400px;
+  }
+  to {
+    background-position: -100px bottom;
+    background-size: 2750px 400px;
+  }
+}
 .footer {
   position: relative;
   z-index: 2;

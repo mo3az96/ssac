@@ -1592,10 +1592,14 @@ html[dir=ltr] .vision-2030 {
     text-align: start;
     justify-content: flex-start;
     height: auto;
+    border: none;
     transition: all 0.3s ease-in-out;
   }
   .header-nav .lang-content .lang-list a:hover {
     color: #088F44;
+  }
+  .header-nav .lang-content .lang-list a ~ a {
+    border: none;
   }
   .header-nav .header-contacts {
     display: flex;
@@ -1612,6 +1616,7 @@ html[dir=ltr] .vision-2030 {
     color: #1d1f1f;
   }
   .header-nav .header-btn {
+    display: flex;
     width: calc(100% - 30px);
     margin: 15px;
   }

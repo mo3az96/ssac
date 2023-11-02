@@ -64,6 +64,7 @@ $(document).ready(function () {
     on: {
       init: function (swiper) {
         lazyLoad();
+        $("video").get(0).play();
       },
     },
   });

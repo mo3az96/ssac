@@ -318,7 +318,7 @@ html[dir=ltr] .hero-section .pattern {
 }
 
 .main-slider {
-  aspect-ratio: var(--aspect-ratio);
+  height: 100vh;
   position: relative;
 }
 @media (max-width: 993px) {
@@ -439,7 +439,7 @@ html[dir=ltr] .hero-section .pattern {
 }
 
 .main-slide {
-  aspect-ratio: var(--aspect-ratio);
+  height: 100vh;
   position: relative;
 }
 @media (max-width: 993px) {
@@ -557,8 +557,14 @@ html[dir=ltr] .hero-section .pattern {
   }
 }
 .thumbs-content .thumbs-slider {
-  width: 170px;
-  height: 470px;
+  height: 305px;
+  width: 120px;
+}
+@media (min-width: 1440px) {
+  .thumbs-content .thumbs-slider {
+    height: 470px;
+    width: 170px;
+  }
 }
 .thumbs-content .swiper {
   width: 100%;

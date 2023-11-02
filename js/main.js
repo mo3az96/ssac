@@ -32,8 +32,15 @@ $(document).ready(function () {
     },
     direction: "vertical",
     slidesPerView: 3,
-    spaceBetween: 40,
     loop: true,
+    breakpoints: {
+      0: {
+        spaceBetween: 15,
+      },
+      1439: {
+        slidesPerView: 3,
+      },
+    },
     on: {
       init: function (swiper) {
         lazyLoad();

@@ -19,6 +19,12 @@ $(document).ready(function () {
     mobileClick();
   });
 
+  /************************************ Fixed Header ************************************/
+  $(window).scroll(function () {
+    $(this).scrollTop() >= 250
+      ? $("header").addClass("fixed")
+      : $("header").removeClass("fixed ");
+  });
   /************************************ Main Slider ************************************/
   var thumbSwiper = new Swiper(".thumbs-slider .swiper", {
     a11y: {
@@ -55,14 +61,6 @@ $(document).ready(function () {
     thumbs: {
       swiper: thumbSwiper,
     },
-    breakpoints: {
-      0: {
-        direction: "horizontal",
-      },
-      1199: {
-        direction: "vertical",
-      },
-    },
     on: {
       init: function (swiper) {
         lazyLoad();
@@ -73,6 +71,9 @@ $(document).ready(function () {
   /************************************ Team Slider ************************************/
   var teamSwiper = new Swiper(".team-slider .swiper", {
     loop: true,
+    autoplay: {
+      delay: 5000,
+    },
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -105,6 +106,9 @@ $(document).ready(function () {
   /************************************ Blog Slider ************************************/
   var blogSwiper = new Swiper(".blog-slider .swiper", {
     loop: true,
+    autoplay: {
+      delay: 5000,
+    },
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -192,3 +196,18 @@ function mobileClick() {
     $(".footer-title").off("click");
   }
 }
+
+jQuery(function ($) {
+  $(window)
+    .scroll(function () {
+      var $window = $(window);
+      $footer = $("footer");
+      var scroll = $window.scrollTop() + $window.height();
+      if ($footer.position().top <= scroll) {
+        $footer.addClass("active");
+      } else {
+        $footer.removeClass("active");
+      }
+    })
+    .scroll();
+});

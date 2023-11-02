@@ -296,7 +296,7 @@ html[dir=ltr] .section-tools .swiper-btn svg {
   max-width: 100%;
   overflow: hidden;
   background-color: #fff;
-  --aspect-ratio: 1512/889;
+  --aspect-ratio: 1920/1080;
 }
 .hero-section .pattern {
   position: absolute;
@@ -452,7 +452,8 @@ html[dir=ltr] .hero-section .pattern {
   width: 100%;
   height: 100%;
 }
-.main-slide .slide-img img {
+.main-slide .slide-img img,
+.main-slide .slide-img video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -973,20 +974,6 @@ html[dir=ltr] .blog-item .blog-more:hover span {
   filter: blur(0);
 }
 
-header {
-  background-color: rgba(29, 31, 31, 0.8);
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-@media (max-width: 1199px) {
-  header .container {
-    max-width: 100%;
-  }
-}
-
 .top-header {
   border-bottom: 1px solid #333333;
   background-color: rgba(29, 31, 31, 0.6);
@@ -1012,6 +999,7 @@ header {
 
 .top-header .header {
   padding: 45px 0 25px;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 1199px) {
   .top-header .header {
@@ -1027,6 +1015,7 @@ header {
 .logo {
   display: block;
   width: 335px;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 1199px) {
   .logo {
@@ -1101,6 +1090,7 @@ header {
   top: 40px;
   width: 92px;
   inset-inline-end: 0;
+  transition: all 0.3s ease-in-out;
 }
 html[dir=rtl] .vision-2030 {
   transform: translateX(-100%);
@@ -1213,6 +1203,7 @@ html[dir=ltr] .vision-2030 {
   height: 54px;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 993px) {
   .sublist-content .sublist-btn {
@@ -1288,6 +1279,82 @@ html[dir=ltr] .vision-2030 {
   stroke: #6DB863;
 }
 
+header {
+  background-color: rgba(29, 31, 31, 0.8);
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 1199px) {
+  header .container {
+    max-width: 100%;
+  }
+}
+header.fixed {
+  background-color: #1d1f1f;
+}
+header.fixed .top-header .header {
+  padding: 20px 0;
+}
+@media (max-width: 1199px) {
+  header.fixed .top-header .header {
+    padding: 15px 0;
+  }
+}
+@media (max-width: 993px) {
+  header.fixed .top-header .header {
+    padding: 10px 0;
+  }
+}
+header.fixed .logo {
+  display: block;
+  width: 300px;
+}
+@media (max-width: 1199px) {
+  header.fixed .logo {
+    width: 200px;
+  }
+}
+@media (max-width: 993px) {
+  header.fixed .logo {
+    width: 175px;
+  }
+}
+header.fixed .vision-2030 {
+  top: 50%;
+  width: 80px;
+}
+html[dir=rtl] header.fixed .vision-2030 {
+  transform: translateX(-100%) translateY(-50%);
+}
+html[dir=ltr] header.fixed .vision-2030 {
+  transform: translateX(100%) translateY(-50%);
+}
+@media (max-width: 1359px) {
+  html[dir=rtl] header.fixed .vision-2030 {
+    transform: none;
+  }
+  html[dir=ltr] header.fixed .vision-2030 {
+    transform: none;
+  }
+}
+@media (max-width: 993px) {
+  header.fixed .vision-2030 {
+    width: 50px;
+  }
+}
+header.fixed .sublist-content .sublist-btn {
+  height: 45px;
+}
+@media (max-width: 993px) {
+  header.fixed .sublist-content .sublist-btn {
+    height: 35px;
+  }
+}
+
 .header-nav .lang-content {
   display: none;
 }
@@ -1333,6 +1400,9 @@ html[dir=ltr] .vision-2030 {
   display: flex;
   align-items: center;
   position: relative;
+}
+.fixed .list-item {
+  height: 45px;
 }
 .list-item:hover .list-link {
   color: #6DB863;
@@ -1489,6 +1559,9 @@ html[dir=ltr] .vision-2030 {
     height: auto;
     padding: 15px;
   }
+  .fixed .list-item {
+    height: auto;
+  }
   .list-item ~ .list-item {
     margin-inline-start: 0;
   }
@@ -1554,6 +1627,9 @@ html[dir=ltr] .vision-2030 {
   }
   .header-nav .lang-content .lang-btn {
     justify-content: space-between;
+    height: auto;
+  }
+  .fixed .header-nav .lang-content .lang-btn {
     height: auto;
   }
   .header-nav .lang-content .lang-btn .text {
@@ -1628,15 +1704,6 @@ html[dir=ltr] .vision-2030 {
   overflow: hidden;
   background-color: #fff;
 }
-.services-section .pattern {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 @media (max-width: 993px) {
   .services-section {
     padding: 40px 0;
@@ -1654,20 +1721,12 @@ html[dir=ltr] .vision-2030 {
   width: 100%;
   overflow: hidden;
   background-color: #fff;
+  background-size: cover;
 }
 @media (max-width: 993px) {
   .team-section {
     padding: 30px 0;
   }
-}
-.team-section .pattern {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .team-content {
@@ -1798,6 +1857,12 @@ footer {
   width: 100%;
   overflow: hidden;
   background-repeat: no-repeat;
+}
+footer:not(.active) {
+  background-position: bottom;
+}
+footer.active {
+  background-position: unset;
   animation: slidein 75s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;

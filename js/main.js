@@ -84,20 +84,27 @@ $(document).ready(function () {
     },
     breakpoints: {
       0: {
-        slidesPerView: 1,
+        slidesPerView: "auto",
         spaceBetween: 15,
+        centeredSlides: true,
       },
+
       767: {
-        slidesPerView: 2,
+        slidesPerView: "auto",
         spaceBetween: 30,
+        centeredSlides: true,
       },
+
       992: {
         slidesPerView: 3,
         spaceBetween: 15,
+        centeredSlides: false,
       },
+
       1199: {
         slidesPerView: 3,
         spaceBetween: 30,
+        centeredSlides: false,
       },
     },
     navigation: {
@@ -119,20 +126,24 @@ $(document).ready(function () {
     },
     breakpoints: {
       0: {
-        slidesPerView: 1,
+        slidesPerView: "auto",
         spaceBetween: 15,
+        centeredSlides: true,
       },
       767: {
-        slidesPerView: 2,
+        slidesPerView: "auto",
         spaceBetween: 30,
+        centeredSlides: true,
       },
       992: {
         slidesPerView: 3,
         spaceBetween: 15,
+        centeredSlides: false,
       },
       1199: {
         slidesPerView: 3,
         spaceBetween: 30,
+        centeredSlides: false,
       },
     },
     navigation: {

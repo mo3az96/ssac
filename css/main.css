@@ -139,6 +139,64 @@ html {
   background: linear-gradient(77.41deg, rgba(32, 158, 89, 0.098) 7.67%, rgba(29, 105, 64, 0.09) 55.76%, rgba(206, 44, 51, 0.09) 100%);
 }
 
+.more-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 43px;
+}
+.more-items .more-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #088F44;
+  fill: #088F44;
+  transition: all 0.3s ease-in-out;
+}
+.more-items .more-link .icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-start: 11px;
+}
+.more-items .more-link:hover {
+  color: #B9272D;
+  fill: #B9272D;
+}
+.more-items .more-link.loading .icon {
+  background-image: conic-gradient(from 180deg at 50% 50%, #088f44 0deg, rgba(196, 196, 196, 0) 360deg);
+  border-radius: 50%;
+  position: relative;
+  animation: spin 1s linear infinite;
+}
+.more-items .more-link.loading .icon:after {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  display: block;
+}
+.more-items .more-link.loading .icon svg {
+  display: none;
+}
+.more-items .more-link.loading:hover {
+  color: #088F44;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .main-btn {
   min-width: 130px;
   height: 48px;
@@ -761,6 +819,34 @@ html[dir=ltr] .service-link .service-more:hover span {
   }
 }
 
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px 30px;
+}
+@media (max-width: 1199px) {
+  .members-grid {
+    gap: 25px 15px;
+  }
+}
+@media (max-width: 993px) {
+  .members-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 30px;
+  }
+}
+@media (max-width: 767px) {
+  .members-grid {
+    gap: 25px 15px;
+  }
+}
+@media (max-width: 480px) {
+  .members-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 .team-member {
   max-width: 100%;
   overflow: hidden;
@@ -1357,7 +1443,6 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  transform: perspective(1px);
   transition: all 0.3s ease-in-out;
 }
 @media (max-width: 1199px) {
@@ -2393,6 +2478,12 @@ html[dir=ltr] .footer-list a:hover {
 .feature-item .feature-title img {
   margin-bottom: 10px;
 }
+@media (max-width: 767px) {
+  .feature-item .feature-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+}
 .feature-item .feature-description {
   font-size: 16px;
   font-weight: 400;
@@ -2419,7 +2510,7 @@ html[dir=ltr] .footer-list a:hover {
     z-index: 1;
     background-color: transparent;
     justify-content: flex-end;
-    opacity: 0.3;
+    opacity: 0.2;
     width: -moz-max-content;
     width: max-content;
     height: -moz-max-content;
@@ -2468,4 +2559,106 @@ html[dir=ltr] .footer-list a:hover {
   .feature-item:nth-child(even) .feature-img {
     order: 2;
   }
+}
+
+.boardPage-main {
+  padding: 101px 0 100px;
+}
+@media (max-width: 993px) {
+  .boardPage-main {
+    padding: 40px 0;
+  }
+}
+.boardPage-main .boardMain-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chairman-member {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.chairman-member .member-img {
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+.chairman-member .member-img.loaded-img img {
+  filter: unset;
+}
+.chairman-member .member-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.chairman-member .member-img:hover img {
+  transform: scale(1.2);
+}
+@media (max-width: 767px) {
+  .chairman-member .member-img {
+    margin-bottom: 25px;
+  }
+}
+.chairman-member .member-name {
+  font-size: 40px;
+  font-weight: 700;
+  color: #333;
+  line-height: 0.8;
+  margin: 0 0 30px;
+}
+.chairman-member .member-name a {
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+.chairman-member .member-name a:hover {
+  color: #088F44;
+}
+@media (max-width: 767px) {
+  .chairman-member .member-name {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+.chairman-member .member-position {
+  font-size: 24px;
+  line-height: 0.923;
+  color: #088F44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .chairman-member .member-position {
+    font-size: 18px;
+  }
+}
+
+.boardMembers-section {
+  width: 100%;
+  overflow: hidden;
+  padding: 78px 0 83px;
+  background-color: #fff;
+  position: relative;
+}
+.boardMembers-section .pattern {
+  position: absolute;
+  top: 373px;
+}
+.boardMembers-section .pattern.start {
+  inset-inline-start: 0;
+}
+.boardMembers-section .pattern.end {
+  transform: scaleX(-1);
+  inset-inline-end: 0;
 }/*# sourceMappingURL=main.css.map */

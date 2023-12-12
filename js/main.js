@@ -55,6 +55,7 @@ $(document).ready(function () {
     loop: true,
     // autoplay: {
     //   delay: 5000,
+    // disableOnInteraction: false,
     // },
     effect: "fade",
     navigation: {
@@ -81,6 +82,7 @@ $(document).ready(function () {
     loop: true,
     autoplay: {
       delay: 5000,
+      disableOnInteraction: false,
     },
     breakpoints: {
       0: {
@@ -108,8 +110,8 @@ $(document).ready(function () {
       },
     },
     navigation: {
-      nextEl: ".team-section .swiper-btn-next",
-      prevEl: ".team-section .swiper-btn-prev",
+      nextEl: ".team-section .swiper-btn-next,.team-slider .swiper-btn-next ",
+      prevEl: ".team-section .swiper-btn-prev,.team-slider .swiper-btn-prev ",
     },
     on: {
       init: function (swiper) {
@@ -123,6 +125,7 @@ $(document).ready(function () {
     loop: true,
     autoplay: {
       delay: 5000,
+      disableOnInteraction: false,
     },
     breakpoints: {
       0: {

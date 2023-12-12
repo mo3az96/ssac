@@ -3277,4 +3277,141 @@ html[dir=ltr] .footer-list a:hover {
 }
 .bankAccount-item .item-value {
   color: #333;
+}
+
+.jobs-main {
+  padding: 40px 0 56px;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+}
+@media (max-width: 993px) {
+  .jobs-main {
+    padding: 30px 0 45px;
+  }
+}
+
+.jobs-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+@media (max-width: 993px) {
+  .jobs-list {
+    gap: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .jobs-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.job-item {
+  border: 1px solid #d6d6d6;
+  background-color: #fff;
+  border-radius: 15px;
+}
+.job-item .item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  height: 94px;
+}
+@media (max-width: 993px) {
+  .job-item .item-header {
+    padding: 0 20px;
+    height: 60px;
+  }
+}
+.job-item .job-title {
+  font-size: 24px;
+  line-height: 1.5;
+  color: #088F44;
+  font-weight: 700;
+  margin: 0;
+  margin-inline-end: 15px;
+}
+@media (max-width: 993px) {
+  .job-item .job-title {
+    font-size: 20px;
+  }
+}
+.job-item .job-icon {
+  fill: #344554;
+}
+.job-item .item-body {
+  border-block: 1px solid #d6d6d6;
+  padding: 25px 25px 30px;
+}
+@media (max-width: 993px) {
+  .job-item .item-body {
+    padding: 20px 20px 25px;
+  }
+}
+.job-item .job-informations {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (max-width: 993px) {
+  .job-item .job-informations {
+    gap: 20px;
+  }
+}
+.job-item .information-item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+@media (max-width: 993px) {
+  .job-item .information-item {
+    font-size: 16px;
+    line-height: 1.6;
+    gap: 10px;
+  }
+}
+.job-item .item-title {
+  color: #088F44;
+}
+.job-item .item-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 25px 23px;
+  padding-inline-end: 20px;
+}
+@media (max-width: 993px) {
+  .job-item .item-footer {
+    padding: 20px;
+  }
+}
+.job-item .job-btn {
+  height: 48px;
+  font-size: 16px;
+}
+.job-item .date {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.job-item .date svg {
+  stroke: #088F44;
+  margin-inline-start: 7px;
+}
+@media (max-width: 993px) {
+  .job-item .date {
+    font-size: 16px;
+  }
+  .job-item .date svg {
+    margin-inline-start: 3px;
+  }
 }/*# sourceMappingURL=main.css.map */

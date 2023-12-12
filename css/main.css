@@ -3198,4 +3198,83 @@ html[dir=ltr] .footer-list a:hover {
 }
 .download-item:hover .arrow {
   animation: scr-pos 2s linear infinite;
+}
+
+.bankAccounts-main {
+  padding: 40px 0 55px;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+}
+@media (max-width: 993px) {
+  .bankAccounts-main {
+    padding: 30px 0 45px;
+  }
+}
+
+.bankAccounts-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+@media (max-width: 1199px) {
+  .bankAccounts-list {
+    gap: 15px;
+  }
+}
+@media (max-width: 993px) {
+  .bankAccounts-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .bankAccounts-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bankAccount-item {
+  padding: 24px 25px 33px;
+  border: 1px solid #d6d6d6;
+  border-radius: 15px;
+  background-color: #fff;
+}
+.bankAccount-item .bank-img {
+  width: 205px;
+  aspect-ratio: 205/180;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+}
+.bankAccount-item .bank-img img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.bankAccount-item .bank-informations {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.bankAccount-item .information-item {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+  width: 100%;
+}
+@media (max-width: 1199px) {
+  .bankAccount-item .information-item {
+    font-size: 16px;
+  }
+}
+.bankAccount-item .information-item span {
+  display: block;
+}
+.bankAccount-item .item-title {
+  color: #088F44;
+}
+.bankAccount-item .item-value {
+  color: #333;
 }/*# sourceMappingURL=main.css.map */

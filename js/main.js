@@ -21,7 +21,7 @@ $(document).ready(function () {
 
   /************************************ Fixed Header ************************************/
   $(window).scroll(function () {
-    $(this).scrollTop() >= 250
+    $(this).scrollTop() >= 150
       ? $("header").addClass("fixed")
       : $("header").removeClass("fixed ");
   });

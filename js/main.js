@@ -219,17 +219,10 @@ function mobileClick() {
   }
 }
 
-jQuery(function ($) {
-  $(window)
-    .scroll(function () {
-      var $window = $(window);
-      $footer = $("footer");
-      var scroll = $window.scrollTop() + $window.height();
-      if ($footer.position().top <= scroll) {
-        $footer.addClass("active");
-      } else {
-        $footer.removeClass("active");
-      }
-    })
-    .scroll();
-});
+function copyToClipboard(text) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val(text).select();
+  document.execCommand("copy");
+  $temp.remove();
+}

@@ -159,6 +159,41 @@ $(document).ready(function () {
       },
     },
   });
+
+  /************************************ Form ************************************/
+  $(".file-content input").change(function () {
+    var previewParent = $(this).siblings(".file-preview");
+    var preview = previewParent.find("span");
+    var file = $(this)[0].files[0];
+    console.log(file);
+    if (file) {
+      var fileName = $(this)[0].files[0].name;
+      $(preview).text(fileName);
+      $(previewParent).addClass("active");
+    } else {
+      $(preview).text("");
+      $(previewParent).removeClass("active");
+    }
+  });
+
+  $(".file-content .delete").click(function () {
+    var el = $(this).parents(".file-content").find("input");
+    el.wrap("<form>").closest("form").get(0).reset();
+    el.unwrap();
+    $(this).parent().removeClass("active");
+  });
+
+  $(".add-input").click(function () {
+    var placeholder = $(this)
+      .parents(".form-group")
+      .find("input")
+      .attr("placeholder");
+    $(
+      '<input type="text" class="form-control" placeholder="' +
+        placeholder +
+        '" />'
+    ).insertBefore(this);
+  });
 });
 
 function mobileClick() {

@@ -1107,6 +1107,203 @@ html[dir=ltr] .blog-item .blog-more:hover span {
   height: 24px;
 }
 
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 30px;
+  align-items: flex-start;
+}
+@media (max-width: 993px) {
+  .form-grid {
+    gap: 0 15px;
+  }
+}
+@media (max-width: 767px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+@media (max-width: 767px) {
+  .form-group {
+    margin-bottom: 20px;
+  }
+}
+.form-group .add-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #088F44;
+  border: 1px dashed #088f44;
+  margin-top: 15px;
+  transition: all 0.3s ease-in-out;
+}
+.form-group .add-input:hover {
+  background-color: #088F44;
+  color: #fff;
+}
+
+.form-label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.875;
+  padding: 0;
+  margin: 0 0 4px;
+}
+
+.form-error {
+  color: #ee4c45;
+  font-size: 12px;
+  font-weight: 500;
+  order: 3;
+}
+.form-error ~ .form-control {
+  border-color: #ee4c45;
+}
+.form-error ~ .form-control.file-content {
+  border-color: #ee4c45;
+}
+
+.form-control {
+  border: 1px solid #eeeeee;
+  background-color: #f8f8f8;
+  padding: 0 16px;
+  border-radius: 8px;
+  width: 100%;
+  height: 48px;
+  line-height: 2.142857;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1d1f1f;
+  transition: all 0.3s ease-in-out;
+}
+.form-control:focus {
+  background-color: #f8f8f8;
+  border-color: #088F44;
+  box-shadow: none;
+}
+.form-control::-moz-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: #a5a5a5;
+}
+.form-control::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: #a5a5a5;
+}
+html[dir=rtl] .form-control::-moz-placeholder {
+  direction: rtl;
+  text-align: right;
+}
+html[dir=rtl] .form-control::placeholder {
+  direction: rtl;
+  text-align: right;
+}
+.form-control:is(textarea) {
+  height: 111px;
+  padding: 11px 16px;
+  resize: none;
+}
+.form-control.file-content {
+  background-color: #fff;
+  border: 1px dashed #088F44;
+  height: 157px;
+  padding: 0;
+  overflow: hidden;
+}
+.form-control.file-content label {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.form-control.file-content label input {
+  display: none;
+}
+.form-control.file-content label .file-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 11px 16px;
+  border-radius: 8px;
+}
+.form-control.file-content label .file-text span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.85714;
+}
+.form-control.file-content label .file-text svg {
+  margin-bottom: 16px;
+  fill: #088F44;
+}
+.form-control.file-content label .file-text .delete {
+  position: absolute;
+  top: 11px;
+  inset-inline-start: 8px;
+  background-color: #ee4c45;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+.form-control.file-content label .file-text .delete svg {
+  fill: #fff;
+  margin: 0;
+}
+.form-control.file-content label .file-text .delete:hover {
+  background-color: #B9272D;
+}
+.form-control.file-content label .file-text.file-placeholder span {
+  width: 100%;
+  max-width: 266px;
+  color: #666;
+}
+.form-control.file-content label .file-text.file-preview {
+  z-index: 3;
+  display: none;
+}
+.form-control.file-content label .file-text.file-preview span {
+  color: #1d1f1f;
+}
+.form-control.file-content label .file-text.file-preview.active {
+  display: flex;
+}
+.form-control ~ .form-control {
+  margin-top: 10px;
+}
+
+.submit-btn {
+  width: 161px;
+  font-size: 16px;
+  margin: 15px auto 0;
+  display: flex;
+}
+
 .lazy-img-parent img {
   transition: all 0.3s ease-in-out;
 }
@@ -3439,7 +3636,7 @@ html[dir=ltr] .footer-list a:hover {
 }
 @media (max-width: 993px) {
   .jobDetails-main {
-    padding: 30px 0 45px;
+    padding: 40px 0 45px;
   }
 }
 
@@ -3752,4 +3949,35 @@ html[dir=ltr] .job-related .related-item svg {
 }
 .job-share .copy-link:hover {
   fill: #B9272D;
+}
+
+.jobApply-main {
+  padding: 60px 0;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+}
+@media (max-width: 993px) {
+  .jobApply-main {
+    padding: 45px 0;
+  }
+}
+
+.job-apply {
+  border-radius: 25px;
+  border-bottom: 5px solid #088F44;
+}
+@media (max-width: 993px) {
+  .job-apply {
+    border-radius: 15px;
+  }
+}
+
+.apply-body {
+  padding: 28px 30px 39px;
+}
+@media (max-width: 993px) {
+  .apply-body {
+    padding: 25px 15px;
+  }
 }/*# sourceMappingURL=main.css.map */

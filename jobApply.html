@@ -447,7 +447,15 @@
                     </div>
                   </div>
                 </div>
-                <button class="submit-btn main-btn">ارسال</button>
+                <button
+                  type="button"
+                  class="submit-btn main-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#successModal"
+                >
+                  ارسال
+                </button>
+                <!-- <button type="submit" class="submit-btn main-btn">ارسال</button> -->
               </form>
             </div>
           </div>
@@ -567,6 +575,28 @@
     </footer>
     <!-- End Footer -->
 
+    <!-- Start Modal -->
+    <div
+      class="modal fade success-modal"
+      id="successModal"
+      tabindex="-1"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="success-icon">
+              <img src="images/icons/success.svg" />
+            </div>
+            <h3 class="success-title">شكرا لك، تم الارسال بنجاح</h3>
+            <a href="jobs.html" class="main-btn success-btn"> حسنا </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

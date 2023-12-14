@@ -198,21 +198,22 @@ html {
 }
 
 .main-btn {
-  min-width: 130px;
+  min-width: 161px;
   height: 48px;
   border-radius: 24px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid #088F44;
   background-color: #088F44;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
 }
 .main-btn:hover {
-  color: #fff;
-  background-color: #B9272D;
+  color: #088F44;
+  background-color: #fff;
 }
 
 .section-head {
@@ -309,6 +310,10 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.more-content .main-btn {
+  min-width: 130px;
+  font-size: 14px;
 }
 
 .section-tools {
@@ -1302,6 +1307,35 @@ html[dir=rtl] .form-control::placeholder {
   font-size: 16px;
   margin: 15px auto 0;
   display: flex;
+}
+
+.success-modal .modal-dialog {
+  --bs-modal-width: 570px;
+}
+.success-modal .modal-content {
+  --bs-modal-border-radius: 25px;
+  --bs-modal-border-width: 1px;
+  --bs-modal-border-color: #d6d6d6;
+  box-shadow: none;
+}
+.success-modal .modal-body {
+  --bs-modal-padding: 78px 0;
+  text-align: center;
+}
+.success-modal .success-icon {
+  margin-bottom: 31px;
+}
+.success-modal .success-title {
+  font-size: 24px;
+  color: #1d1f1f;
+  font-weight: 500;
+  line-height: 1.042;
+  margin: 0 0 50px;
+}
+
+.modal-backdrop {
+  --bs-backdrop-bg: #1d1f1f;
+  --bs-backdrop-opacity: 0.9;
 }
 
 .lazy-img-parent img {

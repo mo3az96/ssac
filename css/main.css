@@ -4125,4 +4125,70 @@ html[dir=ltr] .job-related .related-item svg {
 }
 .faq-item:has(.collapsed) .faq-header {
   border-color: transparent;
+}
+
+.terms-main {
+  padding: 40px 0 36px;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+}
+@media (max-width: 993px) {
+  .terms-main {
+    padding: 30px 0 25px;
+  }
+}
+
+.terms-description {
+  padding: 40px 30px 33px;
+  border: 1px solid #d6d6d6;
+  background-color: #fff;
+  border-radius: 15px;
+}
+@media (max-width: 993px) {
+  .terms-description {
+    padding: 30px 15px 25px;
+  }
+}
+.terms-description h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1d1f1f;
+  line-height: 1.6;
+  margin: 0 0 30px;
+}
+@media (max-width: 993px) {
+  .terms-description h3 {
+    margin: 0 0 20px;
+    font-size: 18px;
+  }
+}
+.terms-description p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  line-height: 2.57143;
+  margin: 0 0 40px;
+}
+@media (max-width: 993px) {
+  .terms-description p {
+    margin: 0 0 25px;
+  }
+}
+.terms-description ul {
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  line-height: 2.57143;
+  padding-inline-start: 20px;
+  list-style: disc;
+  margin: 0 0 40px;
+}
+@media (max-width: 993px) {
+  .terms-description ul {
+    margin: 0 0 25px;
+  }
+}
+.terms-description :last-child {
+  margin: 0;
 }/*# sourceMappingURL=main.css.map */

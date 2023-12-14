@@ -2033,7 +2033,11 @@ header.fixed .sublist-content .sublist-btn {
     display: none;
   }
   .nav-sublist li {
-    padding: 10px 0 0;
+    padding: 0 0 0;
+    height: 45px;
+  }
+  .nav-sublist li:first-of-type {
+    padding-top: 5px;
   }
   .nav-sublist li ~ li {
     margin: 0;
@@ -2041,7 +2045,7 @@ header.fixed .sublist-content .sublist-btn {
   }
   .nav-sublist a {
     height: auto;
-    color: #444444;
+    color: #666;
     padding-inline-start: 0;
     border: none;
   }
@@ -3353,7 +3357,8 @@ html[dir=ltr] .footer-list a:hover {
 }
 @media (max-width: 993px) {
   .download-item {
-    padding: 10px 15px;
+    padding: 15px;
+    min-height: auto;
   }
 }
 .download-item:before {
@@ -4191,4 +4196,33 @@ html[dir=ltr] .job-related .related-item svg {
 }
 .terms-description :last-child {
   margin: 0;
+}
+
+.summary-main {
+  padding: 80px 0 86px;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+}
+@media (max-width: 993px) {
+  .summary-main {
+    padding: 40px 0 45px;
+  }
+}
+
+.summary-files.download-list {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+@media (max-width: 1199px) {
+  .summary-files.download-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+@media (max-width: 993px) {
+  .summary-files.download-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 }/*# sourceMappingURL=main.css.map */

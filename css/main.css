@@ -1319,11 +1319,21 @@ html[dir=rtl] .form-control::placeholder {
   box-shadow: none;
 }
 .success-modal .modal-body {
-  --bs-modal-padding: 78px 0;
+  --bs-modal-padding: 78px 15px;
   text-align: center;
+}
+@media (max-width: 993px) {
+  .success-modal .modal-body {
+    --bs-modal-padding: 40px 10px;
+  }
 }
 .success-modal .success-icon {
   margin-bottom: 31px;
+}
+@media (max-width: 993px) {
+  .success-modal .success-icon {
+    margin-bottom: 15px;
+  }
 }
 .success-modal .success-title {
   font-size: 24px;
@@ -1331,6 +1341,11 @@ html[dir=rtl] .form-control::placeholder {
   font-weight: 500;
   line-height: 1.042;
   margin: 0 0 50px;
+}
+@media (max-width: 993px) {
+  .success-modal .success-title {
+    margin-bottom: 25px;
+  }
 }
 
 .modal-backdrop {
@@ -4014,4 +4029,100 @@ html[dir=ltr] .job-related .related-item svg {
   .apply-body {
     padding: 25px 15px;
   }
+}
+
+.faq-main {
+  padding: 40px 0 0;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+}
+@media (max-width: 993px) {
+  .faq-main {
+    padding: 30px 0 10px;
+    background-size: unset;
+  }
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  background-color: #f1faf5;
+  border: 1px solid #d6d6d6;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 993px) {
+  .faq-item {
+    margin-bottom: 20px;
+  }
+}
+.faq-item .faq-header {
+  width: 100%;
+  border-bottom: 1px solid #eeeeee;
+  transition: all 0.3s ease-in-out;
+}
+.faq-item .faq-button {
+  width: 100%;
+  padding: 25px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  color: #1d1f1f;
+  font-weight: 500;
+  line-height: 1.6;
+}
+@media (max-width: 993px) {
+  .faq-item .faq-button {
+    padding: 15px;
+    font-size: 18px;
+    align-items: flex-start;
+  }
+}
+.faq-item .faq-button svg {
+  fill: #088F44;
+  flex-shrink: 0;
+  margin-inline-start: 30px;
+}
+.faq-item .faq-button svg .transform {
+  position: relative;
+  transform-origin: center;
+  opacity: 0;
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 993px) {
+  .faq-item .faq-button svg {
+    margin-inline-start: 20px;
+    margin-top: 5px;
+  }
+}
+.faq-item .faq-button::after {
+  display: none;
+}
+.faq-item .faq-button.collapsed svg .transform {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+.faq-item .faq-body {
+  padding: 15px 20px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  line-height: 2.57142;
+}
+.faq-item .faq-body * {
+  margin: 0;
+}
+@media (max-width: 993px) {
+  .faq-item .faq-body {
+    padding: 15px;
+  }
+}
+.faq-item:has(.collapsed) {
+  background-color: #fff;
+}
+.faq-item:has(.collapsed) .faq-header {
+  border-color: transparent;
 }/*# sourceMappingURL=main.css.map */

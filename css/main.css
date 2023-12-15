@@ -1149,7 +1149,7 @@ html[dir=ltr] .blog-item .blog-more:hover span {
   font-size: 14px;
   font-weight: 400;
   color: #088F44;
-  border: 1px dashed #088f44;
+  border: 1px dashed #088F44;
   margin-top: 15px;
   transition: all 0.3s ease-in-out;
 }
@@ -1165,6 +1165,13 @@ html[dir=ltr] .blog-item .blog-more:hover span {
   line-height: 1.875;
   padding: 0;
   margin: 0 0 4px;
+}
+.form-label:has(.field-help) {
+  display: flex;
+  align-items: center;
+}
+.calculator-form .form-label {
+  font-weight: 500;
 }
 
 .form-error {
@@ -1307,6 +1314,167 @@ html[dir=rtl] .form-control::placeholder {
   font-size: 16px;
   margin: 15px auto 0;
   display: flex;
+}
+
+.field-help {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-inline-start: 8px;
+}
+@media (max-width: 767px) {
+  .field-help {
+    display: none;
+  }
+}
+.field-help .help-icon {
+  fill: #088F44;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.field-help .help-tooltip {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  inset-inline-start: calc(100% + 9px);
+  padding: 10px;
+  border: 1px solid #eeeeee;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #088F44;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.8333334;
+  text-align: center;
+  width: 240px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.field-help .help-tooltip::after, .field-help .help-tooltip::before {
+  top: 50%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.field-help .help-tooltip::before {
+  border-color: rgba(238, 238, 238, 0);
+  border-left-color: #eee;
+}
+.field-help .help-tooltip::after {
+  border-color: rgba(255, 255, 255, 0);
+  border-left-color: #fff;
+}
+html[dir=rtl] .field-help .help-tooltip::after, html[dir=rtl] .field-help .help-tooltip::before {
+  left: 100%;
+}
+html[dir=rtl] .field-help .help-tooltip::before {
+  border-width: 8px;
+  margin-top: -8px;
+}
+html[dir=rtl] .field-help .help-tooltip::after {
+  border-width: 7px;
+  margin-top: -7px;
+}
+html[dir=ltr] .field-help .help-tooltip::after, html[dir=ltr] .field-help .help-tooltip::before {
+  right: 100%;
+}
+html[dir=ltr] .field-help .help-tooltip::after {
+  border-width: 8px;
+  margin-top: -8px;
+}
+html[dir=ltr] .field-help .help-tooltip::before {
+  border-width: 7px;
+  margin-top: -7px;
+}
+.field-help:hover .help-icon {
+  fill: #B9272D;
+}
+.field-help:hover .help-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.radios-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 39px;
+  align-items: center;
+  border: 1px solid #eeeeee;
+  padding: 15px;
+  border-radius: 8px;
+}
+@media (max-width: 993px) {
+  .radios-container {
+    gap: 10px;
+    padding: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .radios-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.radio label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.radio label .circle-mark {
+  border: 2px solid #79747e;
+  background-color: #fff;
+  width: 18px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-inline-end: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.radio label .circle-mark svg {
+  fill: #fff;
+  transform-origin: center;
+  transform: rotate(360deg) scale(0);
+  transition: all 0.3s ease-in-out;
+}
+.radio label .text {
+  font-size: 16px;
+  color: #666;
+  font-weight: 400;
+  line-height: 1.875;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 993px) {
+  .radio label .text {
+    font-size: 14px;
+  }
+}
+.radio label input {
+  display: none;
+}
+.radio label input:checked ~ .text {
+  color: #333;
+}
+.radio label input:checked ~ .circle-mark {
+  border-color: #088F44;
+  background-color: #088F44;
+}
+.radio label input:checked ~ .circle-mark svg {
+  transform: rotate(0) scale(1);
 }
 
 .success-modal .modal-dialog {
@@ -4225,4 +4393,166 @@ html[dir=ltr] .job-related .related-item svg {
     grid-template-columns: 1fr;
     gap: 15px;
   }
+}
+
+.calculator-main {
+  padding: 60px 0 56px;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+}
+@media (max-width: 993px) {
+  .calculator-main {
+    padding: 40px 0 38px;
+  }
+}
+
+.calculator-content {
+  width: 100%;
+  max-width: 830px;
+  margin: auto;
+}
+
+.calculator-block {
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
+  border-bottom: 5px solid #088f44;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.calculator-block .calculator-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  border-bottom: 1px solid #d6d6d6;
+  padding: 0 25px;
+}
+@media (max-width: 993px) {
+  .calculator-block .calculator-header {
+    height: 60px;
+  }
+}
+.calculator-block .calculator-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #1d1f1f;
+  margin: 0;
+}
+.calculator-block .calculator-title img {
+  width: 40px;
+  margin-inline-end: 15px;
+}
+@media (max-width: 993px) {
+  .calculator-block .calculator-title {
+    font-size: 18px;
+  }
+  .calculator-block .calculator-title img {
+    width: 30px;
+    margin-inline-end: 10px;
+  }
+}
+
+.calculator-body {
+  padding: 25px 28px 35px;
+}
+@media (max-width: 993px) {
+  .calculator-body {
+    padding: 25px 15px;
+  }
+}
+.calculator-body .calculator-form-title {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1d1f1f;
+  line-height: 2;
+  margin: 0 0 41px;
+}
+@media (max-width: 993px) {
+  .calculator-body .calculator-form-title {
+    margin: 0 0 20px;
+  }
+}
+
+.calculator-table {
+  margin-top: 30px;
+  border-radius: 25px;
+  border: 1px solid #d6d6d6;
+  background-color: #fff;
+  overflow: hidden;
+}
+.calculator-table .table-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1px solid #d6d6d6;
+  min-height: 71px;
+  padding: 15px;
+}
+@media (max-width: 993px) {
+  .calculator-table .table-head {
+    min-height: auto;
+    padding: 10px;
+  }
+}
+.calculator-table .table-title {
+  color: #1d1f1f;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0;
+}
+.calculator-table .table-title span {
+  color: #088F44;
+}
+@media (max-width: 993px) {
+  .calculator-table .table-title {
+    font-size: 18px;
+  }
+}
+.calculator-table .table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  border-bottom: 1px solid #e1e4ea;
+  background-color: #e1e4ea;
+}
+.calculator-table .table-row .table-cell {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7142857;
+  color: #0e0f11;
+}
+@media (max-width: 993px) {
+  .calculator-table .table-row .table-cell {
+    padding: 10px;
+  }
+}
+.calculator-table .table-row:nth-of-type(odd) {
+  background-color: #d5d9e1;
+  border-color: #d5d9e1;
+}
+.calculator-table .table-row:nth-of-type(odd) .table-cell {
+  background-color: #f8f8f8;
+}
+.calculator-table .table-row:last-of-type {
+  border: none;
+  background-color: #fff;
+}
+.calculator-table .table-row:last-of-type .table-cell {
+  background-color: #088F44;
+  color: #fff;
+  font-weight: 700;
 }/*# sourceMappingURL=main.css.map */

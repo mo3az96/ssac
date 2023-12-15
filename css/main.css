@@ -695,6 +695,8 @@ html[dir=ltr] .hero-section .pattern {
   grid-template-columns: repeat(3, 1fr);
   align-items: flex-start;
   gap: 30px;
+}
+.services-section .services-list {
   margin-bottom: 30px;
 }
 @media (max-width: 993px) {
@@ -712,13 +714,29 @@ html[dir=ltr] .hero-section .pattern {
 
 .service-item {
   max-width: 100%;
-  overflow: hidden;
+  height: 274px;
+  position: relative;
+  z-index: 9;
 }
-.service-item:nth-of-type(2) .service-link {
+.service-item:nth-of-type(2n) .service-link {
   background-color: #ebecee;
 }
-.service-item:nth-of-type(3) .service-link {
+.service-item:nth-of-type(3n) .service-link {
   background-color: #f8e9ea;
+}
+.service-item:nth-of-type(3n) ~ .service-item {
+  z-index: 8;
+}
+.service-item:nth-of-type(6n) ~ .service-item {
+  z-index: 7;
+}
+.service-item:nth-of-type(9n) ~ .service-item {
+  z-index: 7;
+}
+@media (max-width: 993px) {
+  .service-item {
+    height: auto;
+  }
 }
 
 .service-link {
@@ -729,7 +747,7 @@ html[dir=ltr] .hero-section .pattern {
   text-align: center;
   padding: 30px 36px 27px;
   border-bottom: 5px solid transparent;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s linear;
 }
 @media (max-width: 993px) {
   .service-link {
@@ -4555,4 +4573,15 @@ html[dir=ltr] .job-related .related-item svg {
   background-color: #088F44;
   color: #fff;
   font-weight: 700;
+}
+
+.services-main {
+  padding: 60px 0;
+  width: 100%;
+  background-size: cover;
+}
+@media (max-width: 993px) {
+  .services-main {
+    padding: 30px 0;
+  }
 }/*# sourceMappingURL=main.css.map */

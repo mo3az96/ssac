@@ -1718,31 +1718,79 @@ html[dir=ltr] .vision-2030 {
     gap: 30px;
   }
 }
+@media (max-width: 993px) {
+  .sec-header-tools {
+    flex-direction: row;
+  }
+}
 
 .header-icon {
   display: flex;
   align-items: center;
   fill: #fff;
+  order: 2;
   transition: all 0.3s ease-in-out;
+}
+@media (max-width: 1199px) {
+  .header-icon {
+    order: 3;
+  }
 }
 .header-icon:hover {
   fill: #6DB863;
 }
 
 .user-content {
-  margin-inline-start: 20px;
+  margin-inline-start: 26px;
+  order: 3;
 }
-@media (max-width: 993px) {
+@media (max-width: 1199px) {
   .user-content {
     margin: 0;
+    order: 2;
+  }
+}
+.user-content .sublist-btn {
+  display: flex;
+  align-items: center;
+  fill: #088F44;
+}
+.user-content .sublist-btn .arrow {
+  fill: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1199px) {
+  .user-content .sublist-btn .arrow {
+    display: none;
+  }
+}
+.user-content .sublist-btn .user-name {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.33334;
+  margin-inline-start: 8px;
+  margin-inline-end: 12px;
+}
+@media (max-width: 1199px) {
+  .user-content .sublist-btn .user-name {
+    display: none;
   }
 }
 .user-content:hover .user-icon {
-  fill: #6DB863;
+  fill: #088F44;
 }
 
 .lang-content {
-  margin-inline-start: 27px;
+  margin-inline-end: 17px;
+  order: 1;
+}
+@media (max-width: 1199px) {
+  .lang-content {
+    margin: 0;
+  }
 }
 @media (max-width: 993px) {
   .lang-content {
@@ -1810,12 +1858,21 @@ html[dir=ltr] .vision-2030 {
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
+.sublist-content .sublist-body.user-list {
+  min-width: 183px;
+}
+.sublist-content .sublist-body.user-list .sublist-item:last-of-type {
+  color: #b9272d;
+}
 @media (max-width: 1199px) {
   .sublist-content .sublist-body {
     min-width: 115px;
   }
   .sublist-content .sublist-body.lang-list {
     min-width: 100px;
+  }
+  .sublist-content .sublist-body.user-list {
+    min-width: 135px;
   }
 }
 .sublist-content .sublist-item {
@@ -2021,10 +2078,10 @@ header.fixed .sublist-content .sublist-btn {
   height: 45px;
 }
 .list-item:hover .list-link {
-  color: #6DB863;
+  color: #088F44;
 }
 .list-item:hover .list-link .arrow {
-  fill: #6DB863;
+  fill: #088F44;
 }
 .list-item:hover .nav-sublist {
   visibility: visible;
@@ -2052,10 +2109,10 @@ header.fixed .sublist-content .sublist-btn {
   transition: all 0.3s ease-in-out;
 }
 .list-link:hover {
-  color: #6DB863;
+  color: #088F44;
 }
 .list-link:hover .arrow {
-  fill: #6DB863;
+  fill: #088F44;
 }
 
 .nav-sublist {

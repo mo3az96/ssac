@@ -1130,6 +1130,191 @@ html[dir=ltr] .blog-item .blog-more:hover span {
   height: 24px;
 }
 
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+@media (max-width: 1199px) {
+  .courses-grid {
+    gap: 15px;
+  }
+}
+@media (max-width: 993px) {
+  .courses-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 447px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.course-item {
+  background-color: #fff;
+  border-radius: 15px;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #f8f8f8;
+  box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.0588235294);
+}
+@media (max-width: 993px) {
+  .course-item {
+    width: 100%;
+    max-width: 370px;
+    margin: 0 auto;
+  }
+}
+.course-item .course-pattern {
+  position: absolute;
+  top: 10.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  opacity: 0.4;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 993px) {
+  .course-item .course-pattern {
+    top: 5.5px;
+  }
+}
+.course-item .course-info {
+  padding: 30px 30px 15px;
+}
+@media (max-width: 993px) {
+  .course-item .course-info {
+    padding: 20px 15px 15px;
+  }
+}
+.course-item .course-img {
+  position: relative;
+  z-index: 2;
+  aspect-ratio: 310/220;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d6d6d6;
+  background-color: #fff;
+  padding: 30px 34px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+@media (max-width: 993px) {
+  .course-item .course-img {
+    margin-bottom: 15px;
+    padding: 25px 15px;
+  }
+}
+.course-item .course-img img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: all 0.3s ease-in-out;
+}
+.course-item .course-img:hover img {
+  transform: scale(0.95);
+}
+.course-item .course-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 15px;
+}
+.course-item .course-title a {
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+.course-item .course-title a:hover {
+  color: #088F44;
+}
+@media (max-width: 993px) {
+  .course-item .course-title {
+    margin: 0 0 10px;
+    font-size: 18px;
+  }
+}
+.course-item .course-price {
+  text-align: center;
+  color: #088F44;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 700;
+  margin: 0;
+}
+@media (max-width: 993px) {
+  .course-item .course-price {
+    font-size: 18px;
+  }
+}
+.course-item .course-feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+@media (max-width: 993px) {
+  .course-item .course-feature {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+  }
+}
+.course-item .course-feature .title {
+  font-weight: 400;
+  color: #333;
+}
+.course-item .course-feature .value {
+  font-weight: 500;
+  --status-color: #088f44;
+  color: var(--status-color);
+}
+.course-item .course-feature .value.finished {
+  --status-color: #a5a5a5;
+}
+.course-item .course-feature .value.unavailable {
+  --status-color: #b9272d;
+}
+.course-item .course-feature .value.inprogress {
+  --status-color: #ffaf44;
+}
+.course-item .course-feature:last-of-type {
+  border-top: 1px solid #eeeeee;
+  padding-top: 15px;
+}
+@media (max-width: 993px) {
+  .course-item .course-feature:last-of-type {
+    padding-top: 10px;
+  }
+}
+.course-item .course-feature:last-of-type .title {
+  font-weight: 500;
+}
+.course-item .course-feature:last-of-type .value {
+  display: flex;
+  align-items: center;
+}
+.course-item .course-feature:last-of-type .value::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--status-color);
+  margin-inline-end: 6px;
+}
+
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -5115,4 +5300,126 @@ html[dir=ltr] .job-related .related-item svg {
   background-color: #B9272D;
   border-color: #B9272D;
   color: #fff;
+}
+
+.coursesPage-main {
+  padding: 60px 0 64px;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+}
+@media (max-width: 993px) {
+  .coursesPage-main {
+    padding: 40px 0 38px;
+  }
+}
+
+.sitemapPage-main {
+  padding: 60px 0 68px;
+  width: 100%;
+  background-size: cover;
+}
+@media (max-width: 993px) {
+  .sitemapPage-main {
+    padding: 30px 0;
+  }
+}
+
+.sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+@media (max-width: 993px) {
+  .sitemap-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .sitemap-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+.sitemap-item {
+  border: 1px solid #088F44;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 96px;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  font-size: 18px;
+  color: #444444;
+  font-weight: 500;
+  line-height: 1.33334;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  .sitemap-item {
+    font-size: 16px;
+    min-height: 85px;
+  }
+}
+.sitemap-item:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(ellipse at center, rgba(8, 143, 68, 0.35) 0%, rgba(8, 143, 68, 0) 80%);
+  transition: all 0.3s ease-in-out;
+}
+.sitemap-item:hover {
+  background-color: #fff;
+  color: #088F44;
+  transform: translateY(-5px);
+}
+.sitemap-item:hover::before {
+  opacity: 1;
+  transform: translateY(5px);
+}
+.sitemap-item .pattern {
+  position: absolute;
+  top: 9px;
+}
+@media (max-width: 993px) {
+  .sitemap-item .pattern {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .sitemap-item .pattern {
+    display: block;
+  }
+}
+.sitemap-item:nth-of-type(odd) .pattern {
+  inset-inline-start: 0;
+}
+@media (max-width: 767px) {
+  .sitemap-item:nth-of-type(odd) .pattern {
+    inset-inline-start: unset;
+    inset-inline-end: 0;
+    transform: scaleX(-1);
+  }
+}
+.sitemap-item:nth-of-type(even) .pattern {
+  inset-inline-end: 0;
+  transform: scaleX(-1);
+}
+@media (max-width: 767px) {
+  .sitemap-item:nth-of-type(even) .pattern {
+    inset-inline-end: unset;
+    inset-inline-start: 0;
+    transform: none;
+  }
 }/*# sourceMappingURL=main.css.map */

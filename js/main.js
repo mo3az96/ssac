@@ -194,6 +194,13 @@ $(document).ready(function () {
         '" />'
     ).insertBefore(this);
   });
+
+  if ($(window).width() >= 992) {
+    $("select").select2({
+      minimumResultsForSearch: Infinity,
+      width: "100%",
+    });
+  }
 });
 
 function mobileClick() {

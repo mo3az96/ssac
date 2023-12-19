@@ -201,6 +201,10 @@ $(document).ready(function () {
       width: "100%",
     });
   }
+  $("#dateTimePicker").DateTimePicker({
+    timeFormat: "hh:mm AA",
+    language: document.dir == "rtl" ? "ar" : "",
+  });
 });
 
 function mobileClick() {

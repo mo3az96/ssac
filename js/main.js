@@ -160,6 +160,53 @@ $(document).ready(function () {
     },
   });
 
+  /************************************ post Sliders ************************************/
+
+  var thumbPostSwiper = new Swiper(".post-thumbs-slider .swiper", {
+    // loop: true,
+
+    navigation: {
+      nextEl: ".post-thumbs-slider .swiper-btn-next",
+      prevEl: ".post-thumbs-slider .swiper-btn-prev",
+    },
+    breakpoints: {
+      0: {
+        spaceBetween: 10,
+        slidesPerView: 4,
+      },
+      767: {
+        spaceBetween: 20,
+        slidesPerView: 4,
+      },
+      992: {
+        spaceBetween: 20,
+        slidesPerView: 5,
+      },
+      1199: {
+        spaceBetween: 30,
+        slidesPerView: 6,
+      },
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
+
+  var mainPostSwiper = new Swiper(".post-main-slider .swiper", {
+    // loop: true,
+    spaceBetween: 15,
+    thumbs: {
+      swiper: thumbPostSwiper,
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
+
   /************************************ Form ************************************/
   $(".file-content input").change(function () {
     var previewParent = $(this).siblings(".file-preview");

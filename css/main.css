@@ -7668,7 +7668,7 @@ html[dir=ltr] .post-thumbs-slider .swiper-btn svg {
 .authentication-form {
   width: 100%;
   max-width: 570px;
-  padding: 40px 30px 25px;
+  padding: 40px 30px 35px;
   background-color: #fff;
   border: 1px solid #d6d6d6;
   border-bottom: 5px solid #088F44;
@@ -7686,6 +7686,11 @@ html[dir=ltr] .post-thumbs-slider .swiper-btn svg {
 .authentication-form .submit-btn {
   margin-top: 10px;
   width: 100%;
+}
+.authentication-form .otp-btn {
+  margin: 10px auto 0;
+  display: flex;
+  width: 140px;
 }
 
 .authentication-tools {
@@ -7748,6 +7753,80 @@ html[dir=ltr] .post-thumbs-slider .swiper-btn svg {
 }
 .form-hint a:hover {
   color: #B9272D;
+}
+
+.otp-content {
+  padding: 50px 0 10px;
+  text-align: center;
+  display: none;
+}
+
+.otp-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1d1f1f;
+  line-height: 1.25;
+  margin: 0 0 24px;
+}
+
+.otp-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.otp-inputs .otp-field {
+  width: 48px;
+  height: 58px;
+  text-align: center;
+  margin: 0;
+  font-size: 16px;
+  padding: 0;
+}
+html[dir=rtl] .otp-inputs .otp-field::-moz-placeholder {
+  text-align: center;
+}
+html[dir=rtl] .otp-inputs .otp-field::placeholder {
+  text-align: center;
+}
+html[dir=ltr] .otp-inputs .otp-field::-moz-placeholder {
+  text-align: center;
+}
+html[dir=ltr] .otp-inputs .otp-field::placeholder {
+  text-align: center;
+}
+
+.resend {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  line-height: 1.857142857;
+  font-size: 14px;
+  color: #1d1f1f;
+  margin: 24px 0 20px;
+}
+.resend button {
+  color: #088F44;
+  stroke: #088F44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.resend button svg {
+  transition: all 1s ease-in-out;
+}
+.resend button span {
+  text-decoration: underline;
+  margin-inline-start: 5px;
+}
+.resend button:hover svg {
+  transform: rotate(360deg);
+}
+.resend button:hover span {
+  text-decoration: none;
 }
 
 .error-page {

@@ -335,6 +335,37 @@ $(document).ready(function () {
       $(input).attr("type", "password");
     }
   });
+
+  $(".forget-submit").click(function (e) {
+    e.preventDefault();
+    $(".otp-content").slideDown();
+    $(".otp-inputs *:input:first").focus();
+  });
+  let otp_fields = $(".otp-inputs .otp-field");
+  otp_fields
+    .on("input", function (e) {
+      $(this).val(
+        $(this)
+          .val()
+          .replace(/[^0-9]/g, "")
+      );
+      let opt_value = "";
+      otp_fields.each(function () {
+        let field_value = $(this).val();
+        if (field_value != "") opt_value += field_value;
+      });
+    })
+    .on("keyup", function (e) {
+      $(this).next().removeAttr("disabled").focus();
+      $(this).removeClass("error").addClass("active");
+    })
+    .on("paste", function (e) {
+      let paste_data = e.originalEvent.clipboardData.getData("text");
+      let paste_data_splitted = paste_data.split("");
+      $.each(paste_data_splitted, function (index, value) {
+        otp_fields.eq(index).val(value);
+      });
+    });
 });
 
 function mobileClick() {

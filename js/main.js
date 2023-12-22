@@ -279,11 +279,22 @@ $(document).ready(function () {
     },
   });
   /************************************ Form ************************************/
+  $(".profile-img input").change(function () {
+    let input = $(this)[0];
+    if (input.files[0]) {
+      $(".profile-img .img-content").append("<img />");
+      $(".profile-img .img-content img")[0].src = (
+        window.URL ? URL : webkitURL
+      ).createObjectURL(input.files[0]);
+    }else{
+      $(".profile-img .img-content").find("img").remove();
+    }
+  });
+
   $(".file-content input").change(function () {
     var previewParent = $(this).siblings(".file-preview");
     var preview = previewParent.find("span");
     var file = $(this)[0].files[0];
-    console.log(file);
     if (file) {
       var fileName = $(this)[0].files[0].name;
       $(preview).text(fileName);

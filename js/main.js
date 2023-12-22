@@ -323,6 +323,18 @@ $(document).ready(function () {
     timeFormat: "hh:mm AA",
     language: document.dir == "rtl" ? "ar" : "",
   });
+
+  $(".password-eye").click(function (e) {
+    if (e.isDefaultPrevented()) return;
+    e.preventDefault();
+    e.stopPropagation();
+    let input = $(this).parents(".password-content").find("input.form-control");
+    if ($(input).attr("type") == "password") {
+      $(input).attr("type", "text");
+    } else {
+      $(input).attr("type", "password");
+    }
+  });
 });
 
 function mobileClick() {

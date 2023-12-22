@@ -1744,6 +1744,59 @@ html[dir=ltr] .field-help .help-tooltip::before {
   transform: rotate(0) scale(1);
 }
 
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.checkbox label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.checkbox label .check-mark {
+  border: 2px solid #79747e;
+  background-color: #fff;
+  width: 18px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  flex-shrink: 0;
+  margin-inline-end: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.checkbox label .check-mark svg {
+  fill: #fff;
+  transform-origin: center;
+  transform: rotate(360deg) scale(0);
+  transition: all 0.3s ease-in-out;
+}
+.checkbox label .text {
+  font-size: 16px;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.875;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 993px) {
+  .checkbox label .text {
+    font-size: 14px;
+  }
+}
+.checkbox label input {
+  display: none;
+}
+.checkbox label input:checked ~ .check-mark {
+  border-color: #088F44;
+  background-color: #088F44;
+}
+.checkbox label input:checked ~ .check-mark svg {
+  transform: rotate(0) scale(1);
+}
+
 .telephone-content {
   position: relative;
 }
@@ -1768,6 +1821,24 @@ html[dir=ltr] .field-help .help-tooltip::before {
 }
 .telephone-content .country-code ~ .form-control {
   padding-left: 90px;
+}
+
+.password-content {
+  position: relative;
+}
+.password-content .password-eye {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  inset-inline-end: 12px;
+  stroke: #a5a5a5;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.password-content .password-eye:hover {
+  stroke: #088F44;
 }
 
 select {
@@ -6727,6 +6798,11 @@ html[dir=rtl] .contact-methods .contact-method .en {
   border-radius: 15px;
   padding: 30px 35px 25px;
 }
+@media (max-width: 1199px) {
+  .booking-form {
+    padding: 20px 15px 25px;
+  }
+}
 
 .rate-main {
   padding: 40px 0 56px;
@@ -7578,6 +7654,100 @@ html[dir=ltr] .post-thumbs-slider .swiper-btn svg {
 .gallery-item:hover .gallery-name, .gallery-item:hover::after {
   opacity: 1;
   transform: none;
+}
+
+.authentication-main {
+  padding: 50px 0 72px;
+}
+@media (max-width: 993px) {
+  .authentication-main {
+    padding: 35px 0;
+  }
+}
+
+.authentication-form {
+  width: 100%;
+  max-width: 570px;
+  padding: 40px 30px 25px;
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
+  border-bottom: 5px solid #088F44;
+  border-radius: 15px;
+  margin: auto;
+}
+@media (max-width: 1199px) {
+  .authentication-form {
+    padding: 20px 15px 25px;
+  }
+}
+.authentication-form .form-group {
+  margin-bottom: 20px;
+}
+.authentication-form .submit-btn {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.authentication-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.forget-text {
+  font-size: 16px;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.875;
+}
+@media (max-width: 993px) {
+  .forget-text {
+    font-size: 14px;
+  }
+}
+.forget-text a {
+  color: #088F44;
+  transition: all 0.3s ease-in-out;
+}
+.forget-text a:hover {
+  color: #B9272D;
+}
+
+.method-btn {
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  margin-top: 20px;
+}
+.method-btn span {
+  color: #088F44;
+  transition: all 0.3s ease-in-out;
+}
+.method-btn:hover {
+  color: #fff;
+  border-color: #B9272D;
+  background-color: #B9272D;
+}
+.method-btn:hover span {
+  color: #fff;
+}
+
+.form-hint {
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 30px 0 0;
+}
+.form-hint a {
+  color: #088F44;
+  transition: all 0.3s ease-in-out;
+}
+.form-hint a:hover {
+  color: #B9272D;
 }
 
 .error-page {

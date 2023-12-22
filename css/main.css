@@ -8046,8 +8046,8 @@ html[dir=ltr] .otp-inputs .otp-field::placeholder {
   border-style: solid;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  border-right: 10px solid #088F44;
-  border-left: 0;
+  border-inline-start: 10px solid #088F44;
+  border-inline-end: 0;
   opacity: 0.2;
   position: absolute;
   top: 50%;
@@ -8078,7 +8078,7 @@ html[dir=ltr] .otp-inputs .otp-field::placeholder {
 .account-aside .account-list a.active {
   color: #088F44;
   fill: #088F44;
-  border-color: #088F44;
+  border-inline-start-color: #088F44;
 }
 .account-aside .account-list a.active::before, .account-aside .account-list a.active::after {
   display: block;

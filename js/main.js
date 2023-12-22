@@ -207,6 +207,77 @@ $(document).ready(function () {
     },
   });
 
+  /************************************ Modal Swiper ************************************/
+  var modals = $(".gallery-modal");
+  for (var i = 0; i < modals.length; i++) {
+    var modal = "#" + $(modals[i]).attr("id");
+    var thumbGallerySwiper = i;
+    var mainGallerySwiper = i;
+    var myvideos = i;
+    thumbGallerySwiper = new Swiper(modal + " .gallery-thumbs-slider .swiper", {
+      loop: true,
+
+      navigation: {
+        nextEl: ".gallery-thumbs-slider .swiper-btn-next",
+        prevEl: ".gallery-thumbs-slider .swiper-btn-prev",
+      },
+      breakpoints: {
+        0: {
+          spaceBetween: 10,
+          slidesPerView: 3,
+        },
+        767: {
+          spaceBetween: 5,
+          slidesPerView: 5,
+        },
+        992: {
+          spaceBetween: 5,
+          slidesPerView: 5,
+        },
+        1199: {
+          spaceBetween: 15,
+          slidesPerView: 5,
+        },
+      },
+      on: {
+        init: function (swiper) {
+          lazyLoad();
+        },
+      },
+    });
+    mainGallerySwiper = new Swiper(modal + " .gallery-main-slider .swiper", {
+      loop: true,
+      spaceBetween: 15,
+      thumbs: {
+        swiper: thumbGallerySwiper,
+      },
+      on: {
+        init: function (swiper) {
+          lazyLoad();
+        },
+      },
+    });
+    mainGallerySwiper.on("slideChange", function () {
+      $(".swiper video").trigger("pause");
+    });
+
+    myvideos = document.getElementById($(modals[i]).attr("id"));
+    myvideos.addEventListener("hide.bs.modal", (event) => {
+      $("video").trigger("pause");
+    });
+  }
+
+  /************************************ Video ************************************/
+  $(".gallery-main-img .video-icon").click(function (e) {
+    $(this).fadeOut();
+    $(this).parents(".gallery-main-img").find("video").trigger("play");
+  });
+
+  $(".gallery-main-img video").on({
+    play: function () {
+      $(this).parent(".gallery-main-img").find(".video-icon").fadeOut();
+    },
+  });
   /************************************ Form ************************************/
   $(".file-content input").change(function () {
     var previewParent = $(this).siblings(".file-preview");

@@ -2051,6 +2051,263 @@ input[type=time], input[data-field=time] {
   }
 }
 
+@media (min-width: 1200px) {
+  .gallery-modal .modal-dialog.modal-xl {
+    --bs-modal-width: 1230px;
+  }
+}
+.gallery-modal .modal-content {
+  --bs-modal-bg: #f8f8f8;
+  --bs-modal-border-radius: 15px;
+  padding: 30px;
+}
+@media (max-width: 993px) {
+  .gallery-modal .modal-content {
+    padding: 50px 15px 20px;
+  }
+}
+.gallery-modal .gallery-modal-header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 36px;
+}
+@media (max-width: 767px) {
+  .gallery-modal .gallery-modal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+}
+.gallery-modal .modal-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.7777778;
+  margin: 0;
+}
+.gallery-modal .modal-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.gallery-modal .modal-numbers span {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.5;
+}
+.gallery-modal .modal-numbers span svg {
+  fill: #088F44;
+  margin-inline-start: 6px;
+}
+.gallery-modal .modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-max-content;
+  width: max-content;
+  margin-inline-start: auto;
+  fill: #333;
+  transition: all 0.3s ease-in-out;
+}
+.gallery-modal .modal-close:hover {
+  fill: #088F44;
+}
+@media (max-width: 767px) {
+  .gallery-modal .modal-close {
+    position: absolute;
+    top: 10px;
+    inset-inline-end: 10px;
+    opacity: 0.7;
+  }
+}
+.gallery-modal .gallery-modal-body {
+  width: 100%;
+  overflow: hidden;
+}
+.gallery-modal .gallery-main-img {
+  aspect-ratio: 1170/702;
+  border-radius: 15px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.gallery-modal .gallery-main-img video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery-modal .gallery-main-img .video-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #fff;
+  cursor: pointer;
+}
+.gallery-modal .gallery-main-img .video-icon img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery-modal .gallery-main-img .video-icon svg {
+  width: 91px;
+  height: 91px;
+  position: relative;
+  z-index: 3;
+}
+.gallery-modal .gallery-main-img .video-icon:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0) 27.08%, rgba(0, 0, 0, 0.8) 52.08%, rgba(0, 0, 0, 0) 71.87%, rgba(0, 0, 0, 0.63) 100%);
+  z-index: 2;
+}
+.gallery-modal .modal-thumbs-slider {
+  position: relative;
+  padding: 0 109px;
+  margin-top: 30px;
+}
+@media (max-width: 1199px) {
+  .gallery-modal .modal-thumbs-slider {
+    padding: 0 30px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 993px) {
+  .gallery-modal .modal-thumbs-slider {
+    padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  .gallery-modal .modal-thumbs-slider {
+    margin-top: 10px;
+  }
+}
+.gallery-modal .modal-thumbs-slider .swiper-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border: 1.5px solid #088F44;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  fill: #088F44;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 993px) {
+  .gallery-modal .modal-thumbs-slider .swiper-btn {
+    display: none;
+  }
+}
+.gallery-modal .modal-thumbs-slider .swiper-btn:hover {
+  fill: #fff;
+  background-color: #088F44;
+}
+html[dir=ltr] .gallery-modal .modal-thumbs-slider .swiper-btn svg {
+  transform: scaleX(-1);
+}
+.gallery-modal .modal-thumbs-slider .swiper-btn.swiper-btn-prev {
+  inset-inline-start: 20px;
+}
+@media (max-width: 1199px) {
+  .gallery-modal .modal-thumbs-slider .swiper-btn.swiper-btn-prev {
+    inset-inline-start: 0;
+  }
+}
+.gallery-modal .modal-thumbs-slider .swiper-btn.swiper-btn-next {
+  inset-inline-end: 20px;
+}
+@media (max-width: 1199px) {
+  .gallery-modal .modal-thumbs-slider .swiper-btn.swiper-btn-next {
+    inset-inline-end: 0;
+  }
+}
+.gallery-modal .modal-thumbs-slider .swiper-btn.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.gallery-modal .modal-thumbs-slider .swiper-btn.swiper-button-disabled:hover {
+  fill: #088F44;
+  background-color: transparent;
+}
+.gallery-modal .gallery-thumb-img {
+  aspect-ratio: 178/135;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+.gallery-modal .gallery-thumb-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery-modal .gallery-thumb-img:after {
+  content: "";
+  background-color: transparent;
+  border: 5px solid #088F44;
+  border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 993px) {
+  .gallery-modal .gallery-thumb-img:after {
+    border-width: 2px;
+  }
+}
+.gallery-modal .gallery-thumb-img .video-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #fff;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0) 27.08%, rgba(0, 0, 0, 0.8) 52.08%, rgba(0, 0, 0, 0) 71.87%, rgba(0, 0, 0, 0.63) 100%);
+}
+.gallery-modal .gallery-thumb-img .video-icon svg {
+  width: 28px;
+  height: 28px;
+}
+.gallery-modal .swiper-slide-thumb-active .gallery-thumb-img::after {
+  visibility: visible;
+  opacity: 1;
+}
+
 .modal-backdrop {
   --bs-backdrop-bg: #1d1f1f;
   --bs-backdrop-opacity: 0.9;

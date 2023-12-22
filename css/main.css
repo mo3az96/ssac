@@ -1755,6 +1755,11 @@ html[dir=ltr] .field-help .help-tooltip::before {
   justify-content: flex-start;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  .terms .checkbox label {
+    align-items: flex-start;
+  }
+}
 .checkbox label .check-mark {
   border: 2px solid #79747e;
   background-color: #fff;
@@ -1774,6 +1779,11 @@ html[dir=ltr] .field-help .help-tooltip::before {
   transform: rotate(360deg) scale(0);
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 767px) {
+  .terms .checkbox label .check-mark {
+    margin-top: 6px;
+  }
+}
 .checkbox label .text {
   font-size: 16px;
   color: #333;
@@ -1781,10 +1791,21 @@ html[dir=ltr] .field-help .help-tooltip::before {
   line-height: 1.875;
   transition: all 0.3s ease-in-out;
 }
+.checkbox label .text a {
+  color: #088F44;
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out;
+}
+.checkbox label .text a:hover {
+  text-decoration: none;
+}
 @media (max-width: 993px) {
   .checkbox label .text {
     font-size: 14px;
   }
+}
+.terms .checkbox label .text {
+  font-size: 14px;
 }
 .checkbox label input {
   display: none;

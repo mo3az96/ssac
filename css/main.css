@@ -2607,6 +2607,102 @@ html[dir=ltr] .gallery-modal .modal-thumbs-slider .swiper-btn svg {
   padding: 19px 0 0;
 }
 
+.cancel-modal .modal-dialog {
+  --bs-modal-width: 570px;
+}
+.cancel-modal .modal-content {
+  --bs-modal-border-radius: 25px;
+  --bs-modal-border-width: 1px;
+  --bs-modal-border-color: #d6d6d6;
+  box-shadow: none;
+}
+.cancel-modal .modal-body {
+  --bs-modal-padding: 50px 44px 59px;
+  text-align: center;
+}
+@media (max-width: 993px) {
+  .cancel-modal .modal-body {
+    --bs-modal-padding: 40px 10px;
+  }
+}
+.cancel-modal .cancel-icon {
+  width: 134px;
+  max-width: 100%;
+  margin: 0 auto 25px;
+}
+@media (max-width: 993px) {
+  .cancel-modal .cancel-icon {
+    margin-bottom: 15px;
+  }
+}
+.cancel-modal .cancel-icon img {
+  width: 100%;
+}
+.cancel-modal .cancel-title {
+  font-size: 20px;
+  color: #1d1f1f;
+  font-weight: 500;
+  line-height: 2.4;
+  margin: 0 0 40px;
+}
+.cancel-modal .cancel-title span {
+  display: block;
+  line-height: 1.64285714;
+  font-size: 28px;
+}
+@media (max-width: 993px) {
+  .cancel-modal .cancel-title {
+    line-height: 2;
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  .cancel-modal .cancel-title span {
+    line-height: 1.5;
+    font-size: 24px;
+  }
+}
+.cancel-modal .modal-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .cancel-modal .modal-btns {
+    gap: 10px;
+  }
+}
+.cancel-modal .modal-btns .cancel-btn {
+  min-width: 97px;
+  padding: 0 30px;
+  height: 48px;
+  border-radius: 24px;
+  border: 1px solid #b9272d;
+  background-color: #fff;
+  color: #b9272d;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.cancel-modal .modal-btns .cancel-btn.back-btn {
+  background-color: #b9272d;
+  color: #fff;
+}
+.cancel-modal .modal-btns .cancel-btn:hover {
+  border-color: #088F44;
+  background-color: #088F44;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .cancel-modal .modal-btns .cancel-btn {
+    font-size: 14px;
+    padding: 0 25px;
+  }
+}
+
 .modal-backdrop {
   --bs-backdrop-bg: #1d1f1f;
   --bs-backdrop-opacity: 0.9;

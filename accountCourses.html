@@ -390,7 +390,11 @@
                   <a href="courseSingleLogged.html" class="course-btn main-btn">
                     التفاصيل
                   </a>
-                  <dutton class="course-btn cancel-btn">
+                  <dutton
+                    class="course-btn cancel-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#cancelModal"
+                  >
                     الغاء الطلب
                     <div class="hint">
                       في حالة الإلغاء، رسوم التسجيل غير مسترده
@@ -605,6 +609,38 @@
       </p>
     </footer>
     <!-- End Footer -->
+
+    <!-- Start Modal -->
+    <div
+      class="modal fade cancel-modal"
+      id="cancelModal"
+      tabindex="-1"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="cancel-icon">
+              <img src="images/cancel.gif" />
+            </div>
+            <h3 class="cancel-title">
+              <span> مرحبا </span> هل انت متأكد من رغبتك في إتمام الغاء الطلب؟
+            </h3>
+            <div class="modal-btns">
+              <button class="cancel-btn back-btn" data-bs-dismiss="modal">
+                تراجع
+              </button>
+              <a href="accountCourses.html" class="cancel-btn">
+                نعم، الغي الان
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

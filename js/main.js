@@ -354,9 +354,11 @@ $(document).ready(function () {
     startTimer($(".resend button").data("duration"));
   });
   const otpModal = document.getElementById("otpModal");
-  otpModal.addEventListener("show.bs.modal", (event) => {
-    startTimer($(".resend button").data("duration"));
-  });
+  if (otpModal) {
+    otpModal.addEventListener("show.bs.modal", (event) => {
+      startTimer($(".resend button").data("duration"));
+    });
+  }
 
   let otp_fields = $(".otp-inputs .otp-field");
   otp_fields

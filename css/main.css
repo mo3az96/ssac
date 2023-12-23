@@ -1179,7 +1179,6 @@ html[dir=ltr] .blog-item .blog-more:hover span {
   background-color: #fff;
   border-radius: 15px;
   max-width: 100%;
-  overflow: hidden;
   position: relative;
   border: 1px solid #f8f8f8;
   box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.0588235294);
@@ -1198,6 +1197,8 @@ html[dir=ltr] .blog-item .blog-more:hover span {
   transform: translateX(-50%);
   z-index: 1;
   opacity: 0.4;
+  max-width: 100%;
+  width: 239px;
   transition: all 0.3s ease-in-out;
 }
 @media (max-width: 993px) {
@@ -1314,6 +1315,24 @@ html[dir=ltr] .blog-item .blog-more:hover span {
 .course-item .course-feature .value.inprogress {
   --status-color: #ffaf44;
 }
+.course-item .course-feature .value.waiting {
+  --status-color: #a5a5a5;
+}
+.course-item .course-feature .value.canceled {
+  --status-color: #f55157;
+}
+.course-item .course-feature.status .value {
+  display: flex;
+  align-items: center;
+}
+.course-item .course-feature.status .value::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--status-color);
+  margin-inline-end: 6px;
+}
 .course-item .course-feature:last-of-type {
   border-top: 1px solid #eeeeee;
   padding-top: 15px;
@@ -1327,16 +1346,72 @@ html[dir=ltr] .blog-item .blog-more:hover span {
   font-weight: 500;
 }
 .course-item .course-feature:last-of-type .value {
+  font-weight: 400;
+}
+.course-item .course-btns {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border-top: 1px solid #eeeeee;
+  padding: 15px;
 }
-.course-item .course-feature:last-of-type .value::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: var(--status-color);
-  margin-inline-end: 6px;
+@media (max-width: 993px) {
+  .course-item .course-btns {
+    padding: 10px;
+    gap: 10px;
+  }
+}
+.course-item .course-btn {
+  width: 110px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: auto;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.course-item .course-btn.cancel-btn {
+  color: #b9272d;
+  border: 2px solid #b9272d;
+  background-color: #fff;
+  position: relative;
+}
+.course-item .course-btn.cancel-btn:hover {
+  color: #fff;
+  background-color: #b9272d;
+}
+.course-item .course-btn.cancel-btn:hover .hint {
+  opacity: 1;
+  visibility: visible;
+}
+.course-item .hint {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.83333334;
+  border: 1px solid #eeeeee;
+  padding: 10px;
+  width: 209px;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  color: #b9272d;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  .course-item .hint {
+    display: none;
+  }
 }
 
 .form-grid {
@@ -6306,6 +6381,12 @@ html[dir=ltr] .job-related .related-item svg {
 .details-block-body .status.inprogress {
   --status-color: #ffaf44;
 }
+.details-block-body .status.waiting {
+  --status-color: #a5a5a5;
+}
+.details-block-body .status.canceled {
+  --status-color: #f55157;
+}
 
 .topics-block-body {
   padding: 20px 20px 29px;
@@ -8231,4 +8312,35 @@ html[dir=ltr] .otp-inputs .otp-field::placeholder {
 
 .personalInfo-form {
   padding-top: 10px;
+}
+
+.myCoursesPage-main {
+  padding: 50px 0 64px;
+  width: 100%;
+  overflow: hidden;
+}
+@media (max-width: 993px) {
+  .myCoursesPage-main {
+    padding: 40px 0 30px;
+  }
+}
+
+.myCourses-page .course-item .course-pattern {
+  width: calc(100% - 26px);
+}
+@media (max-width: 993px) {
+  .myCourses-page .course-item .course-pattern {
+    width: 239px;
+  }
+}
+.myCourses-page .course-item .course-info {
+  padding: 20px 20px 15px;
+}
+@media (max-width: 993px) {
+  .myCourses-page .course-item .course-info {
+    padding: 20px 15px 15px;
+  }
+}
+.myCourses-page .course-item .course-img {
+  aspect-ratio: 330/220;
 }/*# sourceMappingURL=main.css.map */

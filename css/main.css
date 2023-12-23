@@ -2362,7 +2362,13 @@ input[type=time], input[data-field=time] {
   overflow: hidden;
   position: relative;
 }
-.gallery-modal .gallery-main-img video {
+.gallery-modal .gallery-main-img > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery-modal .gallery-main-img > video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -2708,6 +2714,103 @@ html[dir=ltr] .gallery-modal .modal-thumbs-slider .swiper-btn svg {
   --bs-backdrop-opacity: 0.9;
 }
 
+.pre-loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pre-loader img {
+  width: 335px;
+}
+@media (max-width: 767px) {
+  .pre-loader img {
+    width: 200px;
+  }
+}
+.pre-loader .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.pre-loader .progress-bar {
+  background-color: #088F44;
+  border: none;
+  overflow: hidden;
+  width: 200px;
+  height: 2px;
+  box-shadow: none;
+  margin: 20px 0 0 0;
+}
+@media (max-width: 767px) {
+  .pre-loader .progress-bar {
+    width: 100px;
+  }
+}
+.pre-loader .progress-bar span {
+  display: block;
+}
+.pre-loader .bar {
+  background-color: #ccc;
+  box-shadow: none;
+}
+.pre-loader .progress {
+  animation: loader 8s ease infinite;
+  background: #088F44;
+  border: none;
+  padding: 0px;
+  width: 0;
+  height: 2px;
+}
+.pre-loader .progress-bar {
+  transform: rotateY(0deg);
+}
+.pre-loader .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@keyframes loader {
+  0% {
+    width: 0;
+  }
+  20% {
+    width: 10%;
+  }
+  25% {
+    width: 24%;
+  }
+  43% {
+    width: 41%;
+  }
+  56% {
+    width: 50%;
+  }
+  66% {
+    width: 52%;
+  }
+  71% {
+    width: 60%;
+  }
+  75% {
+    width: 76%;
+  }
+  94% {
+    width: 86%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 .lazy-img-parent img {
   transition: all 0.3s ease-in-out;
 }

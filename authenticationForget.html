@@ -396,7 +396,33 @@
                 </div>
                 <div class="resend">
                   لم تتلق الكود؟
-                  <button type="button">
+                  <button type="button" disabled  data-duration="30">
+                    <div class="prgress">
+                      <svg
+                        width="32px"
+                        height="32px"
+                        viewBox="0 0 42 42"
+                        class="donut"
+                      >
+                        <circle
+                          id="c1"
+                          cx="21"
+                          cy="21"
+                          r="15.91549430918954"
+                          stroke-dasharray="100 0"
+                          stroke-dashoffset="100"
+                        ></circle>
+                        <circle
+                          id="c2"
+                          cx="21"
+                          cy="21"
+                          r="15.91549430918954"
+                          stroke-dasharray="0 100"
+                          stroke-dashoffset="0"
+                        ></circle>
+                      </svg>
+                      <span id="counterText"> 5 </span>
+                    </div>
                     <img src="images/form/resend.svg" class="svg" />
                     <span>إعادة ارسال الكود</span>
                   </button>

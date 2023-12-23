@@ -286,7 +286,7 @@ $(document).ready(function () {
       $(".profile-img .img-content img")[0].src = (
         window.URL ? URL : webkitURL
       ).createObjectURL(input.files[0]);
-    }else{
+    } else {
       $(".profile-img .img-content").find("img").remove();
     }
   });
@@ -351,6 +351,7 @@ $(document).ready(function () {
     e.preventDefault();
     $(".otp-content").slideDown();
     $(".otp-inputs *:input:first").focus();
+    startTimer($(".resend button").data("duration"));
   });
   let otp_fields = $(".otp-inputs .otp-field");
   otp_fields
@@ -443,4 +444,35 @@ function copyToClipboard(text) {
   $temp.val(text).select();
   document.execCommand("copy");
   $temp.remove();
+}
+
+function startTimer(duration) {
+  var timeout = setTimeout(function () {
+    var time = duration;
+    var i = 1;
+    var k = (i / duration) * 100;
+    var l = 100 - k;
+    i++;
+
+    $("#c1").css({ "stroke-dasharray": [l, k], "stroke-dasharray": l });
+    $("#c2").css("stroke-dasharray", [k, l]);
+    $("#counterText").text(duration + 1 - i);
+    var interval = setInterval(function () {
+      if (i > time) {
+        clearInterval(interval);
+        clearTimeout(timeout);
+        return;
+      }
+      k = (i / duration) * 100;
+      l = 100 - k;
+      $("#c1").css({ "stroke-dasharray": [l, k], "stroke-dasharray": l });
+      $("#c2").css("stroke-dasharray", [k, l]);
+      $("#counterText").text(duration + 1 - i);
+
+      i++;
+      if (duration + 1 - i == 0) {
+        $(".resend button").removeAttr("disabled");
+      }
+    }, 1000);
+  }, 0);
 }

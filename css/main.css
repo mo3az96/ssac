@@ -8439,4 +8439,209 @@ html[dir=ltr] .otp-inputs .otp-field::placeholder {
 }
 .myCourses-page .course-item .course-img {
   aspect-ratio: 330/220;
+}
+
+.myAppointmentsPage-main {
+  padding: 50px 0 84px;
+  width: 100%;
+  overflow: hidden;
+}
+@media (max-width: 993px) {
+  .myAppointmentsPage-main {
+    padding: 40px 0 40px;
+  }
+}
+
+.appointments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+@media (max-width: 1199px) {
+  .appointments-grid {
+    gap: 15px;
+  }
+}
+@media (max-width: 993px) {
+  .appointments-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 447px) {
+  .appointments-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.appointment-item {
+  background-color: #fff;
+  border-radius: 15px;
+  max-width: 100%;
+  position: relative;
+  border: 1px solid #f8f8f8;
+  box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.0588235294);
+  padding: 27px 0 0;
+}
+@media (max-width: 993px) {
+  .appointment-item {
+    padding: 15px 0 0;
+  }
+}
+.appointment-item .appointment-feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+@media (max-width: 993px) {
+  .appointment-item .appointment-feature {
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+  }
+}
+.appointment-item .appointment-feature:last-of-type {
+  border-top: 1px solid #eeeeee;
+  padding-top: 15px;
+}
+@media (max-width: 993px) {
+  .appointment-item .appointment-feature:last-of-type {
+    padding-top: 10px;
+  }
+}
+.appointment-item .appointment-feature:last-of-type .title {
+  font-weight: 500;
+}
+.appointment-item .appointment-feature:last-of-type .value {
+  font-weight: 400;
+}
+.appointment-item .value {
+  font-weight: 500;
+  color: #088F44;
+  position: relative;
+}
+.appointment-item .value:hover .hint {
+  visibility: visible;
+  opacity: 1;
+}
+.appointment-item .time .value {
+  display: flex;
+  align-items: center;
+  color: #a5a5a5;
+}
+.appointment-item .time .value svg {
+  margin-inline-end: 6px;
+}
+.appointment-item .desc {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.appointment-item .desc .value {
+  background-color: #f8f8f8;
+  border: 1px solid #eeeeee;
+  padding: 17px 15px 13px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.857142857;
+  color: #333;
+  margin-top: 6px;
+}
+.appointment-item .status .value {
+  --status-color: #088f44;
+  color: var(--status-color);
+  display: flex;
+  align-items: center;
+}
+.appointment-item .status .value::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--status-color);
+  margin-inline-end: 6px;
+}
+.appointment-item .status .value.finished {
+  --status-color: #a5a5a5;
+}
+.appointment-item .status .value.unavailable {
+  --status-color: #b9272d;
+}
+.appointment-item .status .value.inprogress {
+  --status-color: #ffaf44;
+}
+.appointment-item .status .value.waiting {
+  --status-color: #a5a5a5;
+}
+.appointment-item .status .value.canceled {
+  --status-color: #f55157;
+}
+.appointment-item .appointment-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border-top: 1px solid #eeeeee;
+  padding: 15px 15px 10px;
+}
+@media (max-width: 993px) {
+  .appointment-item .appointment-btns {
+    padding: 10px;
+    gap: 10px;
+  }
+}
+.appointment-item .appointment-btn {
+  width: 110px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: auto;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.appointment-item .appointment-btn.cancel-btn {
+  color: #b9272d;
+  border: 2px solid #b9272d;
+  background-color: #fff;
+  position: relative;
+}
+.appointment-item .appointment-btn.cancel-btn:hover {
+  color: #fff;
+  background-color: #b9272d;
+}
+.appointment-item .appointment-btn.cancel-btn:hover .hint {
+  opacity: 1;
+  visibility: visible;
+}
+.appointment-item .hint {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.83333334;
+  border: 1px solid #eeeeee;
+  padding: 10px;
+  width: 209px;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  color: #b9272d;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  .appointment-item .hint {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */

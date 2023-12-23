@@ -2459,6 +2459,79 @@ html[dir=ltr] .gallery-modal .modal-thumbs-slider .swiper-btn svg {
   opacity: 1;
 }
 
+.otp-modal .modal-dialog {
+  --bs-modal-width: 570px;
+}
+.otp-modal .modal-content {
+  --bs-modal-border-radius: 15px;
+  border: none;
+  border-bottom: 5px solid #088F44;
+  box-shadow: none;
+}
+.otp-modal .modal-body {
+  --bs-modal-padding: 70px 30px 45px;
+  text-align: center;
+}
+@media (max-width: 993px) {
+  .otp-modal .modal-body {
+    --bs-modal-padding: 30px 15px 25px;
+  }
+}
+.otp-modal .modal-close {
+  position: absolute;
+  top: 27.5px;
+  inset-inline-end: 27.5px;
+  width: 27px;
+  height: 27px;
+  fill: #000;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+.otp-modal .modal-close svg {
+  height: 100%;
+  width: 100%;
+}
+.otp-modal .modal-close:hover {
+  fill: #088F44;
+}
+@media (max-width: 767px) {
+  .otp-modal .modal-close {
+    top: 10px;
+    inset-inline-end: 10px;
+    opacity: 0.7;
+  }
+}
+.otp-modal .form-information {
+  width: 100%;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+.otp-modal .current-value {
+  direction: ltr;
+  color: #1d1f1f;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.875;
+  display: block;
+  margin-bottom: 5px;
+}
+.otp-modal .change-value {
+  font-size: 14px;
+  color: #088F44;
+  padding: 0;
+  line-height: 1.857142857;
+  transition: all 0.3s ease-in-out;
+}
+.otp-modal .change-value:hover {
+  color: #B9272D;
+}
+.otp-modal .otp-content {
+  display: block;
+  padding: 19px 0 0;
+}
+
 .modal-backdrop {
   --bs-backdrop-bg: #1d1f1f;
   --bs-backdrop-opacity: 0.9;

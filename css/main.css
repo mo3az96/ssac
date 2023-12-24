@@ -1031,8 +1031,10 @@ html[dir=ltr] .service-link .service-more:hover span {
   overflow: hidden;
   position: relative;
   border: 1px solid #f8f8f8;
+  border-bottom: 5px solid transparent;
   box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.0588235294);
   margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 993px) {
   .blog-item {
@@ -1154,6 +1156,9 @@ html[dir=ltr] .blog-item .blog-more span svg {
 }
 html[dir=ltr] .blog-item .blog-more:hover span {
   transform: translateX(5px);
+}
+.blog-item:hover {
+  border-bottom-color: #088F44;
 }
 .blog-item:hover .blog-pattern {
   top: 33px;

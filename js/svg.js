@@ -1,4 +1,4 @@
-$(function () {
+function toSvg() {
   $("img.svg").each(function () {
     var $img = $(this);
     var imgID = $img.attr("id");
@@ -41,4 +41,6 @@ $(function () {
       "xml"
     );
   });
-});
+}
+
+toSvg();

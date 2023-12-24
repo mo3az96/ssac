@@ -321,12 +321,15 @@ $(document).ready(function () {
       .find("input")
       .attr("placeholder");
     $(
-      '<input type="text" class="form-control" placeholder="' +
+      '<div class="additional-input"><input type="text" class="form-control" placeholder="' +
         placeholder +
-        '" />'
+        '" /><button type="button" class="delete-additional-input"><img src="images/form/delete.svg" class="svg" /></button></div>'
     ).insertBefore(this);
+    toSvg();
   });
-
+  $("body").on("click", ".delete-additional-input", function (event) {
+    $(this).parents(".additional-input").remove();
+  });
   if ($(window).width() >= 992) {
     $("select").select2({
       minimumResultsForSearch: Infinity,

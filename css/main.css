@@ -1632,9 +1632,6 @@ html[dir=rtl] .form-control::placeholder {
 .form-control.file-content label .file-text.file-preview.active {
   display: flex;
 }
-.form-control ~ .form-control {
-  margin-top: 10px;
-}
 .search-form .form-control {
   background-color: #fff;
   border-color: #d6d6d6;
@@ -2206,6 +2203,25 @@ input[type=time], input[data-field=time] {
   .validate p span {
     display: none;
   }
+}
+
+.additional-input {
+  margin-top: 10px;
+  position: relative;
+}
+.additional-input .delete-additional-input {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #ee4c45;
+  position: absolute;
+  top: 0;
+  inset-inline-end: 12px;
+  transition: all 0.3s ease-in-out;
+}
+.additional-input .delete-additional-input:hover {
+  fill: #c9362d;
 }
 
 .dtpicker-bg {

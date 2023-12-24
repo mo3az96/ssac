@@ -168,10 +168,6 @@ $(document).ready(function () {
   var thumbPostSwiper = new Swiper(".post-thumbs-slider .swiper", {
     // loop: true,
 
-    navigation: {
-      nextEl: ".post-thumbs-slider .swiper-btn-next",
-      prevEl: ".post-thumbs-slider .swiper-btn-prev",
-    },
     breakpoints: {
       0: {
         spaceBetween: 10,
@@ -208,6 +204,10 @@ $(document).ready(function () {
         lazyLoad();
       },
     },
+    navigation: {
+      nextEl: ".post-thumbs-slider .swiper-btn-next",
+      prevEl: ".post-thumbs-slider .swiper-btn-prev",
+    },
   });
 
   /************************************ Modal Swiper ************************************/
@@ -220,10 +220,6 @@ $(document).ready(function () {
     thumbGallerySwiper = new Swiper(modal + " .gallery-thumbs-slider .swiper", {
       loop: true,
 
-      navigation: {
-        nextEl: ".gallery-thumbs-slider .swiper-btn-next",
-        prevEl: ".gallery-thumbs-slider .swiper-btn-prev",
-      },
       breakpoints: {
         0: {
           spaceBetween: 10,
@@ -253,6 +249,10 @@ $(document).ready(function () {
       spaceBetween: 15,
       thumbs: {
         swiper: thumbGallerySwiper,
+      },
+      navigation: {
+        nextEl: ".gallery-thumbs-slider .swiper-btn-next",
+        prevEl: ".gallery-thumbs-slider .swiper-btn-prev",
       },
       on: {
         init: function (swiper) {

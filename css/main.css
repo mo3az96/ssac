@@ -1505,6 +1505,9 @@ html[dir=ltr] .blog-item .blog-more:hover span {
   color: #1d1f1f;
   transition: all 0.3s ease-in-out;
 }
+html[dir=rtl] .form-control {
+  direction: rtl;
+}
 .form-control:focus {
   background-color: #f8f8f8;
   border-color: #088F44;
@@ -2153,6 +2156,43 @@ input[type=date], input[data-field=date] {
 }
 input[type=time], input[data-field=time] {
   background-image: url(../images/form/time.svg);
+}
+
+.validate {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset-inline-end: 97px;
+}
+.validate a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #088F44;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.validate a:hover {
+  color: #B9272D;
+}
+.validate p {
+  display: flex;
+  align-items: center;
+  color: #088F44;
+  fill: #088F44;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+.validate p span {
+  margin-inline-start: 8px;
+}
+@media (max-width: 767px) {
+  .validate p span {
+    display: none;
+  }
 }
 
 .dtpicker-bg {

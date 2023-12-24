@@ -387,6 +387,20 @@
                     <img src="images/lang/ar.svg" />
                     +966
                   </span>
+                  <div class="validate">
+                    <a
+                      class="otp-modal-btn"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#otpModal"
+                    >
+                      تحقق
+                    </a>
+                    <!-- <p>
+                      <img src="images/form/confirmed.svg" class="svg" />
+                      <span>تم التحقق</span>
+                    </p> -->
+                  </div>
                   <input
                     type="tel"
                     class="form-control"
@@ -618,6 +632,107 @@
       </p>
     </footer>
     <!-- End Footer -->
+
+    <!-- Start Modal -->
+    <div
+      class="modal fade otp-modal"
+      id="otpModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button class="modal-close" type="button" data-bs-dismiss="modal">
+              <img src="images/icons/closeModal.svg" class="svg" />
+            </button>
+            <div class="otp-form">
+              <div class="section-head">
+                <h2 class="section-title">
+                  <img src="images/icons/title.svg" />
+                  تأكيد رقم الجوال
+                </h2>
+              </div>
+              <div class="form-information">
+                <h6 class="current-value">+966 534344555644</h6>
+                <button class="change-value" data-bs-dismiss="modal">
+                  تغيير رقم الجوال
+                </button>
+              </div>
+              <form>
+                <div class="otp-content">
+                  <h3 class="otp-title">من فضلك أدخل الكود المرسل علي جوالك</h3>
+                  <div class="otp-inputs">
+                    <input
+                      class="otp-field form-control"
+                      type="number"
+                      maxlength="1"
+                      placeholder="_"
+                    />
+                    <input
+                      class="otp-field form-control"
+                      type="number"
+                      maxlength="1"
+                      placeholder="_"
+                      disabled
+                    />
+                    <input
+                      class="otp-field form-control"
+                      type="number"
+                      maxlength="1"
+                      placeholder="_"
+                      disabled
+                    />
+                    <input
+                      class="otp-field form-control"
+                      type="number"
+                      maxlength="1"
+                      placeholder="_"
+                      disabled
+                    />
+                  </div>
+                  <div class="resend">
+                    لم تتلق الكود؟
+                    <button type="button" disabled data-duration="30">
+                      <div class="prgress">
+                        <svg
+                          width="32px"
+                          height="32px"
+                          viewBox="0 0 42 42"
+                          class="donut"
+                        >
+                          <circle
+                            id="c1"
+                            cx="21"
+                            cy="21"
+                            r="15.91549430918954"
+                            stroke-dasharray="100 0"
+                            stroke-dashoffset="100"
+                          ></circle>
+                          <circle
+                            id="c2"
+                            cx="21"
+                            cy="21"
+                            r="15.91549430918954"
+                            stroke-dasharray="0 100"
+                            stroke-dashoffset="0"
+                          ></circle>
+                        </svg>
+                        <span id="counterText"> 5 </span>
+                      </div>
+                      <img src="images/form/resend.svg" class="svg" />
+                      <span>إعادة ارسال الكود</span>
+                    </button>
+                  </div>
+                  <button type="submit" class="otp-btn main-btn">تأكيد</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>

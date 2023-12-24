@@ -755,7 +755,6 @@ html[dir=ltr] .hero-section .pattern {
 
 .service-item {
   max-width: 100%;
-  height: 274px;
   position: relative;
   z-index: 9;
 }
@@ -764,15 +763,6 @@ html[dir=ltr] .hero-section .pattern {
 }
 .service-item:nth-of-type(3n) .service-link {
   background-color: #f8e9ea;
-}
-.service-item:nth-of-type(3n) ~ .service-item {
-  z-index: 8;
-}
-.service-item:nth-of-type(6n) ~ .service-item {
-  z-index: 7;
-}
-.service-item:nth-of-type(9n) ~ .service-item {
-  z-index: 7;
 }
 @media (max-width: 993px) {
   .service-item {
@@ -787,6 +777,7 @@ html[dir=ltr] .hero-section .pattern {
   overflow: hidden;
   text-align: center;
   padding: 30px 36px 27px;
+  border: 1px solid transparent;
   border-bottom: 5px solid transparent;
   transition: all 0.3s linear;
 }

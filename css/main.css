@@ -2212,6 +2212,33 @@ input[type=time], input[data-field=time] {
 .validate a:hover {
   color: #B9272D;
 }
+.validate a.loading {
+  display: flex;
+  align-items: center;
+}
+.validate a.loading .icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-end: 8px;
+  background-image: conic-gradient(from 180deg at 50% 50%, #088f44 0deg, rgba(196, 196, 196, 0) 360deg);
+  border-radius: 50%;
+  position: relative;
+  animation: spin 1s linear infinite;
+}
+.validate a.loading .icon:after {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  display: block;
+}
+.validate a.loading:hover {
+  color: #088F44;
+}
 .validate p {
   display: flex;
   align-items: center;

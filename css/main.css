@@ -2224,6 +2224,31 @@ input[type=time], input[data-field=time] {
   fill: #c9362d;
 }
 
+.form-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+@media (max-width: 993px) {
+  .form-btns {
+    gap: 10px;
+  }
+}
+.form-btns .main-btn {
+  margin: 0;
+  min-width: 131px;
+}
+.form-btns .reset-btn {
+  border-color: #B9272D;
+  color: #B9272D;
+  background-color: #fff;
+}
+.form-btns .reset-btn:hover {
+  background-color: #B9272D;
+  color: #fff;
+}
+
 .dtpicker-bg {
   font-family: "ping";
 }

@@ -289,7 +289,10 @@
                 <img src="images/icons/search.svg" class="svg" />
               </a>
               <div class="user-content sublist-content">
-                <a href="authenticationLogin.html" class="header-icon user-icon">
+                <a
+                  href="authenticationLogin.html"
+                  class="header-icon user-icon"
+                >
                   <img src="images/icons/user.svg" class="svg" />
                 </a>
               </div>
@@ -435,80 +438,94 @@
                         </div>
                       </div>
                     </div>
+                    <div class="form-btns">
+                      <button type="submit" class="main-btn submit-btn">
+                        عرض الأتعاب
+                      </button>
+                      <button
+                        type="reset"
+                        class="main-btn reset-btn"
+                        onclick="$('.calculator-tables').slideUp(100)"
+                      >
+                        تهيئة الجدول
+                      </button>
+                    </div>
                   </form>
                 </div>
               </div>
             </div>
-            <div class="calculator-table">
-              <div class="table-head">
-                <h6 class="table-title">
-                  جدول الرسوم في حالة هيئة تحكيم مكونة من
-                  <span>(مُحكم واحد)</span>
-                </h6>
+            <div class="calculator-tables">
+              <div class="calculator-table">
+                <div class="table-head">
+                  <h6 class="table-title">
+                    جدول الرسوم في حالة هيئة تحكيم مكونة من
+                    <span>(مُحكم واحد)</span>
+                  </h6>
+                </div>
+                <div class="table-row">
+                  <span class="table-cell"> رسوم التسجيل </span>
+                  <span class="table-cell"> 5.000 ريال سعودي </span>
+                </div>
+                <div class="table-row">
+                  <span class="table-cell"> الرسوم الإدارية </span>
+                  <span class="table-cell"> 10.000 ريال سعودي </span>
+                </div>
+                <div class="table-row">
+                  <span class="table-cell"> العاب المحكم </span>
+                  <span class="table-cell"> 5.000 ريال سعودي </span>
+                </div>
+                <div class="table-row">
+                  <span class="table-cell"> أتعاب الوسيط </span>
+                  <span class="table-cell"> 10.000 ريال سعودي </span>
+                </div>
+                <div class="table-row">
+                  <span class="table-cell"> أتعاب الخبير </span>
+                  <span class="table-cell"> 5.000 ريال سعودي </span>
+                </div>
+                <div class="table-row">
+                  <span class="table-cell"> أتعاب أمين السر </span>
+                  <span class="table-cell"> 10.000 ريال سعودي </span>
+                </div>
+                <div class="table-row">
+                  <span class="table-cell"> إجمالي قيمة الأتعاب المقدرة </span>
+                  <span class="table-cell"> 45.000 ريال سعودي </span>
+                </div>
               </div>
-              <div class="table-row">
-                <span class="table-cell"> رسوم التسجيل </span>
-                <span class="table-cell"> 5.000 ريال سعودي </span>
-              </div>
-              <div class="table-row">
-                <span class="table-cell"> الرسوم الإدارية </span>
-                <span class="table-cell"> 10.000 ريال سعودي </span>
-              </div>
-              <div class="table-row">
-                <span class="table-cell"> العاب المحكم </span>
-                <span class="table-cell"> 5.000 ريال سعودي </span>
-              </div>
-              <div class="table-row">
-                <span class="table-cell"> أتعاب الوسيط </span>
-                <span class="table-cell"> 10.000 ريال سعودي </span>
-              </div>
-              <div class="table-row">
-                <span class="table-cell"> أتعاب الخبير </span>
-                <span class="table-cell"> 5.000 ريال سعودي </span>
-              </div>
-              <div class="table-row">
-                <span class="table-cell"> أتعاب أمين السر </span>
-                <span class="table-cell"> 10.000 ريال سعودي </span>
-              </div>
-              <div class="table-row">
-                <span class="table-cell"> إجمالي قيمة الأتعاب المقدرة </span>
-                <span class="table-cell"> 45.000 ريال سعودي </span>
-              </div>
-            </div>
-            <div class="calculator-table">
-              <div class="table-head">
-                <h6 class="table-title">
-                  جدول الرسوم في حالة هيئة تحكيم مكونة من
-                  <span>(ثلاثة محكمين)</span>
-                </h6>
-              </div>
-              <div class="table-row">
-                <span class="table-cell"> رسوم التسجيل </span>
-                <span class="table-cell"> 15.000 ريال سعودي </span>
-              </div>
-              <div class="table-row">
-                <span class="table-cell"> الرسوم الإدارية </span>
-                <span class="table-cell"> 30.000 ريال سعودي </span>
-              </div>
-              <div class="table-row">
-                <span class="table-cell"> العاب المحكم </span>
-                <span class="table-cell"> 15.000 ريال سعودي </span>
-              </div>
-              <div class="table-row">
-                <span class="table-cell"> أتعاب الوسيط </span>
-                <span class="table-cell"> 30.000 ريال سعودي </span>
-              </div>
-              <div class="table-row">
-                <span class="table-cell"> أتعاب الخبير </span>
-                <span class="table-cell"> 15.000 ريال سعودي </span>
-              </div>
-              <div class="table-row">
-                <span class="table-cell"> أتعاب أمين السر </span>
-                <span class="table-cell"> 30.000 ريال سعودي </span>
-              </div>
-              <div class="table-row">
-                <span class="table-cell"> إجمالي قيمة الأتعاب المقدرة </span>
-                <span class="table-cell"> 135.000 ريال سعودي </span>
+              <div class="calculator-table">
+                <div class="table-head">
+                  <h6 class="table-title">
+                    جدول الرسوم في حالة هيئة تحكيم مكونة من
+                    <span>(ثلاثة محكمين)</span>
+                  </h6>
+                </div>
+                <div class="table-row">
+                  <span class="table-cell"> رسوم التسجيل </span>
+                  <span class="table-cell"> 15.000 ريال سعودي </span>
+                </div>
+                <div class="table-row">
+                  <span class="table-cell"> الرسوم الإدارية </span>
+                  <span class="table-cell"> 30.000 ريال سعودي </span>
+                </div>
+                <div class="table-row">
+                  <span class="table-cell"> العاب المحكم </span>
+                  <span class="table-cell"> 15.000 ريال سعودي </span>
+                </div>
+                <div class="table-row">
+                  <span class="table-cell"> أتعاب الوسيط </span>
+                  <span class="table-cell"> 30.000 ريال سعودي </span>
+                </div>
+                <div class="table-row">
+                  <span class="table-cell"> أتعاب الخبير </span>
+                  <span class="table-cell"> 15.000 ريال سعودي </span>
+                </div>
+                <div class="table-row">
+                  <span class="table-cell"> أتعاب أمين السر </span>
+                  <span class="table-cell"> 30.000 ريال سعودي </span>
+                </div>
+                <div class="table-row">
+                  <span class="table-cell"> إجمالي قيمة الأتعاب المقدرة </span>
+                  <span class="table-cell"> 135.000 ريال سعودي </span>
+                </div>
               </div>
             </div>
           </div>

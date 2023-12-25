@@ -30,12 +30,8 @@ $(document).ready(function () {
   });
   /************************************ Main Slider ************************************/
   var thumbSwiper = new Swiper(".thumbs-slider .swiper", {
-    a11y: {
-      enabled: false,
-    },
     direction: "vertical",
     slidesPerView: 3,
-    loop: true,
     breakpoints: {
       0: {
         spaceBetween: 15,
@@ -51,16 +47,11 @@ $(document).ready(function () {
     },
   });
   var mainSwiper = new Swiper(".main-slider .swiper", {
-    a11y: {
-      enabled: false,
-    },
     spaceBetween: 10,
-    loop: true,
-    // autoplay: {
-    //   delay: 5000,
-    // disableOnInteraction: false,
-    // },
     effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
     navigation: {
       nextEl: ".main-slider .swiper-btn-next",
       prevEl: ".main-slider .swiper-btn-prev",

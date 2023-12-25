@@ -289,7 +289,10 @@
                 <img src="images/icons/search.svg" class="svg" />
               </a>
               <div class="user-content sublist-content">
-                <a href="authenticationLogin.html" class="header-icon user-icon">
+                <a
+                  href="authenticationLogin.html"
+                  class="header-icon user-icon"
+                >
                   <img src="images/icons/user.svg" class="svg" />
                 </a>
               </div>
@@ -350,9 +353,7 @@
             <form>
               <div class="search-form">
                 <div class="search-input">
-                  <!-- <span class="form-error">
-                    كلمة البحث مطلوب
-                  </span> -->
+                  <span class="form-error"> كلمة البحث مطلوبه </span>
                   <input
                     type="search"
                     class="form-control"
@@ -360,9 +361,7 @@
                   />
                 </div>
                 <div class="search-select">
-                  <!-- <span class="form-error">
-                    نوع البحث مطلوب
-                  </span> -->
+                  <span class="form-error"> نوع البحث مطلوب </span>
                   <select class="form-control">
                     <option>نوع البحث</option>
                     <option value="1">خبر</option>
@@ -371,22 +370,160 @@
                     <option value="4">ملخص حكم</option>
                   </select>
                 </div>
-                <a href="searchResults.html" class="search-btn main-btn">
+                <!-- <a href="searchResults.html" class="search-btn main-btn">
                   <span class="text">بحث</span>
                   <img src="images/icons/search.svg" class="svg" />
-                </a>
-                <!-- <button type="submit" class="search-btn main-btn">
+                </a> -->
+                <button type="submit" class="search-btn main-btn">
                   <span class="text">بحث</span>
                   <img src="images/icons/search.svg" class="svg" />
-                </button> -->
+                </button>
               </div>
             </form>
           </div>
 
           <div class="search-results">
-            <div class="no-results">
-              <img src="images/icons/searchEmpty.svg" />
-              <h3>لا يوجد نتيجة بحث</h3>
+            <div class="results-grid">
+              <div class="result-item">
+                <img
+                  src="images/background/result.svg"
+                  class="result-pattern"
+                />
+                <a
+                  href="newsPost.html"
+                  class="result-img loading-img lazy-img-parent"
+                >
+                  <img data-src="images/blog/1.jpg" class="lazy-img" />
+                </a>
+                <div class="result-text">
+                  <h3 class="result-title">
+                    <a href="newsPost.html">
+                      مركز التحكيم الرياضي يعتمد انضمام محكمين جدد
+                    </a>
+                  </h3>
+                  <a href="newsPost.html" class="result-more">
+                    تفاصيل أكثر
+                    <img src="images/icons/more.svg" class="svg" />
+                  </a>
+                </div>
+              </div>
+              <div class="result-item">
+                <img
+                  src="images/background/result.svg"
+                  class="result-pattern"
+                />
+                <a
+                  href="newsPost.html"
+                  class="result-img loading-img lazy-img-parent"
+                >
+                  <img data-src="images/blog/2.jpg" class="lazy-img" />
+                </a>
+                <div class="result-text">
+                  <h3 class="result-title">
+                    <a href="newsPost.html">
+                      تعيين سمو الرئيس عبدالعزيز بن تركي الفيصل نائباً لرئيس
+                      المجلس
+                    </a>
+                  </h3>
+                  <a href="newsPost.html" class="result-more">
+                    تفاصيل أكثر
+                    <img src="images/icons/more.svg" class="svg" />
+                  </a>
+                </div>
+              </div>
+              <div class="result-item">
+                <img
+                  src="images/background/result.svg"
+                  class="result-pattern"
+                />
+                <a
+                  href="newsPost.html"
+                  class="result-img loading-img lazy-img-parent"
+                >
+                  <img data-src="images/blog/3.jpg" class="lazy-img" />
+                </a>
+                <div class="result-text">
+                  <h3 class="result-title">
+                    <a href="newsPost.html">
+                      واحد وتسعون عام بناء وعطاء ونماء ولا نتوقف أبدا
+                    </a>
+                  </h3>
+                  <a href="newsPost.html" class="result-more">
+                    تفاصيل أكثر
+                    <img src="images/icons/more.svg" class="svg" />
+                  </a>
+                </div>
+              </div>
+              <div class="result-item">
+                <img
+                  src="images/background/result.svg"
+                  class="result-pattern"
+                />
+                <a
+                  href="newsPost.html"
+                  class="result-img loading-img lazy-img-parent"
+                >
+                  <img data-src="images/blog/2.jpg" class="lazy-img" />
+                </a>
+                <div class="result-text">
+                  <h3 class="result-title">
+                    <a href="newsPost.html">
+                      تعيين سمو الرئيس عبدالعزيز بن تركي الفيصل نائباً لرئيس
+                      المجلس
+                    </a>
+                  </h3>
+                  <a href="newsPost.html" class="result-more">
+                    تفاصيل أكثر
+                    <img src="images/icons/more.svg" class="svg" />
+                  </a>
+                </div>
+              </div>
+              <div class="result-item">
+                <img
+                  src="images/background/result.svg"
+                  class="result-pattern"
+                />
+                <a
+                  href="newsPost.html"
+                  class="result-img loading-img lazy-img-parent"
+                >
+                  <img data-src="images/blog/3.jpg" class="lazy-img" />
+                </a>
+                <div class="result-text">
+                  <h3 class="result-title">
+                    <a href="newsPost.html">
+                      واحد وتسعون عام بناء وعطاء ونماء ولا نتوقف أبدا
+                    </a>
+                  </h3>
+                  <a href="newsPost.html" class="result-more">
+                    تفاصيل أكثر
+                    <img src="images/icons/more.svg" class="svg" />
+                  </a>
+                </div>
+              </div>
+              <div class="result-item">
+                <img
+                  src="images/background/result.svg"
+                  class="result-pattern"
+                />
+                <a
+                  href="newsPost.html"
+                  class="result-img loading-img lazy-img-parent"
+                >
+                  <img data-src="images/blog/1.jpg" class="lazy-img" />
+                </a>
+                <div class="result-text">
+                  <h3 class="result-title">
+                    <a href="newsPost.html">
+                      مركز التحكيم الرياضي يعتمد انضمام محكمين جدد
+                    </a>
+                  </h3>
+                  <a href="newsPost.html" class="result-more">
+                    تفاصيل أكثر
+                    <img src="images/icons/more.svg" class="svg" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

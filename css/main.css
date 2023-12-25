@@ -1501,6 +1501,9 @@ html[dir=ltr] .blog-item .blog-more:hover span {
 .form-error ~ .form-control.file-content {
   border-color: #ee4c45;
 }
+.form-error ~ .select2-container .select2-selection--single {
+  border-color: #ee4c45;
+}
 .form-error ~ :has(.form-control) .form-control {
   border-color: #ee4c45;
 }
@@ -7514,7 +7517,7 @@ html[dir=rtl] .contact-methods .contact-method .en {
 
 .search-form {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: 20px;
 }
@@ -7530,10 +7533,14 @@ html[dir=rtl] .contact-methods .contact-method .en {
 }
 .search-form .search-input {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .search-form .search-select {
   margin: 0;
   width: 393px;
+  display: flex;
+  flex-direction: column;
   flex-shrink: 0;
 }
 @media (max-width: 1199px) {
@@ -7546,8 +7553,12 @@ html[dir=rtl] .contact-methods .contact-method .en {
     width: calc(100% - 58px);
   }
 }
+.search-form .form-error ~ .form-control {
+  border-color: #ee4c45;
+}
 .search-form .search-btn {
   width: 135px;
+  margin-top: 5px;
   padding: 0;
   flex-shrink: 0;
   min-width: auto;
@@ -7558,6 +7569,7 @@ html[dir=rtl] .contact-methods .contact-method .en {
 @media (max-width: 1199px) {
   .search-form .search-btn {
     width: 48px;
+    margin: 0;
   }
   .search-form .search-btn .text {
     display: none;

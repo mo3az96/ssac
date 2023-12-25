@@ -3280,6 +3280,8 @@ html[dir=ltr] .vision-2030 {
   font-size: 14px;
   font-weight: 500;
   padding: 0 16px;
+  padding-inline-start: 12px;
+  border-inline-start: 4px solid transparent;
   color: #1d1f1f;
   line-height: 1.42857;
   transition: all 0.3s ease-in-out;

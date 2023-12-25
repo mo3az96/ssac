@@ -6571,6 +6571,7 @@ html[dir=ltr] .job-related .related-item svg {
 }
 .course-block .block-header.acc-header {
   cursor: pointer;
+  border: none;
 }
 .course-block .block-header.acc-header:after {
   font-family: "Font Awesome 6 Free";
@@ -6579,8 +6580,8 @@ html[dir=ltr] .job-related .related-item svg {
   content: "\f106";
   transition: transform 0.3s ease-in-out;
 }
-.course-block .block-header.acc-header.closed {
-  border: none;
+.course-block .block-header.acc-header ~ * {
+  border-top: 1px solid #d6d6d6;
 }
 .course-block .block-header.acc-header.closed:after {
   transform: rotate(180deg);

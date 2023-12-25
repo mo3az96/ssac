@@ -272,7 +272,6 @@ $(document).ready(function () {
 
   /************************************ Course Block ************************************/
   $(".course-block .acc-header").click(function (e) {
-
     $(this).toggleClass("closed").next().slideToggle();
   });
 
@@ -351,11 +350,14 @@ $(document).ready(function () {
     if (e.isDefaultPrevented()) return;
     e.preventDefault();
     e.stopPropagation();
+    let eye = $(this);
     let input = $(this).parents(".password-content").find("input.form-control");
     if ($(input).attr("type") == "password") {
       $(input).attr("type", "text");
+      eye.addClass("active");
     } else {
       $(input).attr("type", "password");
+      eye.removeClass("active");
     }
   });
 
@@ -372,31 +374,24 @@ $(document).ready(function () {
     });
   }
 
-  let otp_fields = $(".otp-inputs .otp-field");
-  otp_fields
-    .on("input", function (e) {
-      $(this).val(
-        $(this)
-          .val()
-          .replace(/[^0-9]/g, "")
-      );
-      let opt_value = "";
-      otp_fields.each(function () {
-        let field_value = $(this).val();
-        if (field_value != "") opt_value += field_value;
-      });
-    })
-    .on("keyup", function (e) {
-      $(this).next().removeAttr("disabled").focus();
-      $(this).removeClass("error").addClass("active");
-    })
-    .on("paste", function (e) {
-      let paste_data = e.originalEvent.clipboardData.getData("text");
-      let paste_data_splitted = paste_data.split("");
-      $.each(paste_data_splitted, function (index, value) {
-        otp_fields.eq(index).val(value);
-      });
+  const inputElements = [...document.querySelectorAll("input.otp-field")];
+
+  inputElements.forEach((ele, index) => {
+    ele.addEventListener("input", (e) => {
+      const [first] = e.target.value;
+      e.target.value = first ?? "";
+      const lastInputBox = index === inputElements.length - 1;
+      const insertedContent = first !== undefined;
+      if (insertedContent && !lastInputBox) {
+        inputElements[index + 1].removeAttribute("disabled");
+        inputElements[index + 1].focus();
+        inputElements[index + 1].dispatchEvent(new Event("input"));
+      }
+      if (insertedContent && lastInputBox) {
+        document.getElementById("code-submit-btn").classList.remove("disabled");
+      }
     });
+  });
 });
 
 function mobileClick() {

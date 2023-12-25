@@ -332,7 +332,7 @@
             </a>
           </li>
           <li>
-            <a role="button"> تسجيل الدخول </a>
+            <a href="authenticationLogin.html"> تسجيل الدخول </a>
           </li>
           <li>
             <a role="button"> استعادة كلمة المرور </a>
@@ -407,7 +407,7 @@
                 </div>
                 <div class="resend">
                   لم تتلق الكود؟
-                  <button type="button" disabled  data-duration="30">
+                  <button type="button" disabled data-duration="30">
                     <div class="prgress">
                       <svg
                         width="32px"
@@ -438,10 +438,21 @@
                     <span>إعادة ارسال الكود</span>
                   </button>
                 </div>
-                <!-- <button type="submit" class="otp-btn main-btn">تأكيد</button> -->
-                <a href="authenticationReset.html" class="otp-btn main-btn">
-                    تأكيد
-                  </a>
+                <!-- <button
+                  type="submit"
+                  class="otp-btn main-btn disabled"
+                  id="code-submit-btn"
+                  
+                >
+                  تأكيد
+                </button> -->
+                <a
+                  href="authenticationReset.html"
+                  class="otp-btn main-btn disabled"
+                  id="code-submit-btn"
+                >
+                  تأكيد
+                </a>
               </div>
             </form>
           </div>

@@ -239,6 +239,10 @@ html {
   fill: #088F44;
   background-color: #fff;
 }
+.main-btn.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
 
 .section-head {
   text-align: center;
@@ -1981,7 +1985,7 @@ html[dir=ltr] .field-help .help-tooltip::before {
   direction: ltr;
   font-size: 14px;
   color: #444444;
-  font-weight: 400;
+  font-weight: 500;
 }
 .telephone-content .country-code img {
   width: 35px;
@@ -2008,8 +2012,26 @@ html[dir=ltr] .field-help .help-tooltip::before {
   align-items: center;
   transition: all 0.3s ease-in-out;
 }
-.password-content .password-eye:hover {
-  stroke: #088F44;
+.password-content .password-eye::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  height: 2px;
+  border-radius: 2px;
+  width: calc(100% + 10px);
+  background-color: #a5a5a5;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.password-content .password-eye.active {
+  stroke: #a5a5a5;
+}
+.password-content .password-eye.active::after {
+  visibility: visible;
+  opacity: 1;
 }
 
 select {
@@ -8330,6 +8352,7 @@ html[dir=ltr] .post-thumbs-slider .swiper-btn svg {
   align-items: center;
   justify-content: center;
   gap: 16px;
+  direction: ltr;
 }
 .otp-inputs .otp-field {
   width: 48px;

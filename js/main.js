@@ -270,6 +270,12 @@ $(document).ready(function () {
     });
   }
 
+  /************************************ Course Block ************************************/
+  $(".course-block .acc-header").click(function (e) {
+
+    $(this).toggleClass("closed").next().slideToggle();
+  });
+
   /************************************ Video ************************************/
   $(".gallery-main-img .video-icon").click(function (e) {
     $(this).fadeOut();

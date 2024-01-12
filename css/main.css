@@ -2172,7 +2172,7 @@ html[dir=ltr] .select2-container .select2-selection--single .select2-selection__
   color: #088F44;
 }
 
-input[type=date], input[data-field=date], input[type=time], input[data-field=time] {
+input[type=date], input[data-type=date], input[type=time], input[data-type=time] {
   background-repeat: no-repeat;
   background-size: 20px;
   width: 100%;
@@ -2180,16 +2180,16 @@ input[type=date], input[data-field=date], input[type=time], input[data-field=tim
      -moz-appearance: none;
           appearance: none;
 }
-html[dir=rtl] input[type=date], html[dir=rtl] input[data-field=date], html[dir=rtl] input[type=time], html[dir=rtl] input[data-field=time] {
+html[dir=rtl] input[type=date], html[dir=rtl] input[data-type=date], html[dir=rtl] input[type=time], html[dir=rtl] input[data-type=time] {
   background-position: left 18px top 50%;
 }
-html[dir=ltr] input[type=date], html[dir=ltr] input[data-field=date], html[dir=ltr] input[type=time], html[dir=ltr] input[data-field=time] {
+html[dir=ltr] input[type=date], html[dir=ltr] input[data-type=date], html[dir=ltr] input[type=time], html[dir=ltr] input[data-type=time] {
   background-position: right 18px top 50%;
 }
-input[type=date], input[data-field=date] {
+input[type=date], input[data-type=date] {
   background-image: url(../images/form/date.svg);
 }
-input[type=time], input[data-field=time] {
+input[type=time], input[data-type=time] {
   background-image: url(../images/form/time.svg);
 }
 
@@ -2301,87 +2301,28 @@ input[type=time], input[data-field=time] {
   color: #fff;
 }
 
-.dtpicker-bg {
-  font-family: "ping";
+html[dir=rtl] .flatpickr-current-month {
+  font-size: 130%;
 }
-.dtpicker-bg .dtpicker-content {
-  border: 1px solid #d6d6d6;
-  border-bottom: 5px solid #088f44;
-  background-color: #fff;
-  border-radius: 25px;
-  padding: 30px 25px 25px;
-  position: relative;
+
+.flatpickr-day:hover {
+  background-color: #f8f8f8;
+  border-color: #f8f8f8;
 }
-.dtpicker-bg .dtpicker-subcontent {
-  position: static;
+.flatpickr-day.flatpickr-day.today {
+  border-color: #088F44;
 }
-.dtpicker-bg .dtpicker-header {
-  margin: 0;
-}
-.dtpicker-bg .dtpicker-header .dtpicker-close {
-  position: absolute;
-  inset: unset;
-  top: 20px;
-  inset-inline-start: 20px;
-  background-color: #ee4c45;
-  color: #fff;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  padding: 0;
-}
-.dtpicker-bg .dtpicker-header .dtpicker-title {
-  font-size: 20px;
-  color: #088F44;
-  font-weight: 700;
-}
-.dtpicker-bg .dtpicker-header .dtpicker-value {
-  font-size: 24px;
-  font-weight: 500;
-  color: #1d1f1f;
-}
-.dtpicker-bg .dtpicker-components .dtpicker-comp > * {
-  color: #333;
-  transition: all 0.3s ease-in-out;
-}
-.dtpicker-bg .dtpicker-components .dtpicker-comp > *:hover {
-  color: #088F44;
-}
-.dtpicker-bg .dtpicker-buttonCont {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
-}
-.dtpicker-bg .dtpicker-buttonCont .dtpicker-button {
-  border: 2px solid #088F44;
+.flatpickr-day.flatpickr-day.today:hover, .flatpickr-day.flatpickr-day.today:focus {
+  border-color: #088F44;
   background-color: #088F44;
-  height: 48px;
-  border-radius: 24px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  width: 161px;
-  transition: all 0.3s ease-in-out;
 }
-.dtpicker-bg .dtpicker-buttonCont .dtpicker-button:hover {
-  background-color: #fff;
-  color: #088F44;
+.flatpickr-day.selected {
+  border-color: #088F44;
+  background-color: #088F44;
 }
-.dtpicker-bg .dtpicker-buttonCont .dtpicker-button.dtpicker-buttonClear {
-  background-color: #fff;
-  border: 1px solid #eeeeee;
-  color: #344554;
-}
-.dtpicker-bg .dtpicker-buttonCont .dtpicker-button.dtpicker-buttonClear:hover {
-  border-color: #B9272D;
-  background-color: #B9272D;
-  color: #fff;
+.flatpickr-day.selected:hover, .flatpickr-day.selected:focus {
+  border-color: #088F44;
+  background-color: #088F44;
 }
 
 .success-modal .modal-dialog {

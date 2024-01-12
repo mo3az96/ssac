@@ -332,9 +332,20 @@ $(document).ready(function () {
       width: "100%",
     });
   }
-  $("#dateTimePicker").DateTimePicker({
-    timeFormat: "hh:mm AA",
-    language: document.dir == "rtl" ? "ar" : "",
+
+  var maxDate = $("input[type='date']").data("max"),
+    disabledDate = $("input[type='date']").data("disabled").split(",");
+  flatpickr("input[type='date']", {
+    locale: document.dir == "rtl" ? "ar" : "en",
+    minDate: "today",
+    dateFormat: "d/m/Y",
+    maxDate: maxDate,
+    disable: disabledDate,
+  });
+  flatpickr("input[type='time']", {
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: "H:i",
   });
 
   $(".password-eye").click(function (e) {

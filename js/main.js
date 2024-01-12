@@ -334,7 +334,9 @@ $(document).ready(function () {
   }
 
   var maxDate = $("input[type='date']").data("max"),
-    disabledDate = $("input[type='date']").data("disabled").split(",");
+    disabledDate = $("input[type='date']").data("disabled").split(","),
+    minTime = $("input[type='time']").data("min"),
+    maxTime = $("input[type='time']").data("max");
   flatpickr("input[type='date']", {
     locale: document.dir == "rtl" ? "ar" : "en",
     minDate: "today",
@@ -345,6 +347,8 @@ $(document).ready(function () {
   flatpickr("input[type='time']", {
     enableTime: true,
     noCalendar: true,
+    minTime: minTime,
+    maxTime: maxTime,
     dateFormat: "H:i",
   });
 

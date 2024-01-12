@@ -2049,6 +2049,21 @@ html[dir=rtl] select {
 html[dir=ltr] select {
   background-position: right 18px top 50%;
 }
+select.time-pick {
+  background-repeat: no-repeat;
+  background-size: 20px;
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url(../images/form/time.svg);
+}
+html[dir=rtl] select.time-pick {
+  background-position: left 18px top 50%;
+}
+html[dir=ltr] select.time-pick {
+  background-position: right 18px top 50%;
+}
 
 .select2-container .select2-selection--single {
   padding: 0 16px;
@@ -2172,25 +2187,26 @@ html[dir=ltr] .select2-container .select2-selection--single .select2-selection__
   color: #088F44;
 }
 
-input[type=date], input[data-type=date], input[type=time], input[data-type=time] {
+.time-pick ~ .select2-container .select2-selection--single .select2-selection__arrow::after {
+  padding-top: 7px;
+  display: flex;
+  content: url(../images/form/time.svg);
+}
+
+input[type=date], input[data-type=date] {
   background-repeat: no-repeat;
   background-size: 20px;
   width: 100%;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-}
-html[dir=rtl] input[type=date], html[dir=rtl] input[data-type=date], html[dir=rtl] input[type=time], html[dir=rtl] input[data-type=time] {
-  background-position: left 18px top 50%;
-}
-html[dir=ltr] input[type=date], html[dir=ltr] input[data-type=date], html[dir=ltr] input[type=time], html[dir=ltr] input[data-type=time] {
-  background-position: right 18px top 50%;
-}
-input[type=date], input[data-type=date] {
   background-image: url(../images/form/date.svg);
 }
-input[type=time], input[data-type=time] {
-  background-image: url(../images/form/time.svg);
+html[dir=rtl] input[type=date], html[dir=rtl] input[data-type=date] {
+  background-position: left 18px top 50%;
+}
+html[dir=ltr] input[type=date], html[dir=ltr] input[data-type=date] {
+  background-position: right 18px top 50%;
 }
 
 .validate {

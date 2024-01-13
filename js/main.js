@@ -375,10 +375,18 @@ $(document).ready(function () {
   const otpModal = document.getElementById("otpModal");
   if (otpModal) {
     otpModal.addEventListener("show.bs.modal", (event) => {
-      startTimer($(".resend button").data("duration"));
+      if (!$(".resend button").hasClass("counting")) {
+        $(".resend button").attr("disabled", "disabled");
+        startTimer($(".resend button").data("duration"));
+      }
     });
   }
-
+  $(".resend button").click(function (e) {
+    if (!$(".resend button").hasClass("counting")) {
+      $(".resend button").attr("disabled", "disabled");
+      startTimer($(".resend button").data("duration"));
+    }
+  });
   const inputElements = [...document.querySelectorAll("input.otp-field")];
 
   inputElements.forEach((ele, index) => {
@@ -466,6 +474,7 @@ function copyToClipboard(text) {
 }
 
 function startTimer(duration) {
+  $(".resend button").addClass("counting");
   var timeout = setTimeout(function () {
     var time = duration;
     var i = 1;
@@ -490,7 +499,7 @@ function startTimer(duration) {
 
       i++;
       if (duration + 1 - i == 0) {
-        $(".resend button").removeAttr("disabled");
+        $(".resend button").removeAttr("disabled").removeClass("counting");
       }
     }, 1000);
   }, 0);

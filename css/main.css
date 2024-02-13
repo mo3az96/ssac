@@ -964,13 +964,14 @@ html[dir=ltr] .service-link .service-more:hover span {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  filter: grayscale(1);
+  transition: all 0.3s ease-in-out;
 }
 .member-link .member-img img {
   max-width: 100%;
+  transition: all 0.3s ease-in-out;
   -o-object-fit: cover;
      object-fit: cover;
-  filter: grayscale(1);
-  transition: all 0.3s ease-in-out;
 }
 .member-link .member-info {
   position: absolute;
@@ -1009,9 +1010,11 @@ html[dir=ltr] .service-link .service-more:hover span {
   opacity: 1;
   transform: translateY(0);
 }
+.member-link:hover .member-img {
+  filter: grayscale(0);
+}
 .member-link:hover .member-img img {
   transform: scale(1.2);
-  filter: grayscale(0);
 }
 
 .blog-slider {
@@ -4578,6 +4581,7 @@ html[dir=ltr] .footer-list a:hover {
   overflow: hidden;
   display: flex;
   margin-bottom: 40px;
+  filter: grayscale(1);
   position: relative;
 }
 .boardMember-info .boardMember-img::before, .boardMember-info .boardMember-img:after {
@@ -4605,13 +4609,15 @@ html[dir=ltr] .footer-list a:hover {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  filter: grayscale(1);
   transition: all 0.3s ease-in-out;
 }
 @media (max-width: 767px) {
   .boardMember-info .boardMember-img {
     margin-bottom: 25px;
   }
+}
+.boardMember-info .boardMember-img:hover {
+  filter: grayscale(0);
 }
 .boardMember-info .boardMember-img:hover::after {
   visibility: hidden;
@@ -4624,7 +4630,6 @@ html[dir=ltr] .footer-list a:hover {
 }
 .boardMember-info .boardMember-img:hover img {
   transform: scale(1.2);
-  filter: grayscale(0);
 }
 .boardMember-info .boardMember-name {
   font-size: 40px;

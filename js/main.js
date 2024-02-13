@@ -6,7 +6,9 @@ $(window).on("load", function () {
 });
 
 $(document).ready(function () {
-  $(".hero-section video").get(0).play();
+  if ($(".hero-section video").length > 0) {
+    $(".hero-section video").get(0).play();
+  }
   if ($(window).width() >= 991) {
     sal({
       once: true,

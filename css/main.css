@@ -987,6 +987,7 @@ html[dir=ltr] .service-link .service-more:hover span {
   text-align: center;
   z-index: 3;
   padding: 22px;
+  display: none;
 }
 .member-link .member-name {
   font-size: 20px;

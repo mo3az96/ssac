@@ -971,6 +971,8 @@ html[dir=ltr] .service-link .service-more:hover span {
 .member-link .member-img img {
   max-width: 100%;
   transition: all 0.3s ease-in-out;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .member-link .member-info {
   position: absolute;

@@ -938,26 +938,6 @@ html[dir=ltr] .service-link .service-more:hover span {
   aspect-ratio: 370/398;
   padding: 12px 12px 0;
 }
-.member-link::before, .member-link:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 0.3s ease-in-out;
-}
-.member-link::before {
-  background: linear-gradient(180deg, rgba(32, 158, 89, 0) 0%, rgba(43, 138, 58, 0.05) 45.12%, rgba(0, 0, 0, 0.8) 100%);
-  z-index: 2;
-  transform: translateY(20px);
-  visibility: hidden;
-  opacity: 0;
-}
-.member-link:after {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 37.57%, rgba(0, 0, 0, 0.8) 100%);
-  z-index: 1;
-}
 .member-link .member-img {
   width: 100%;
   height: 100%;
@@ -969,8 +949,6 @@ html[dir=ltr] .service-link .service-more:hover span {
 .member-link .member-img img {
   max-width: 100%;
   transition: all 0.3s ease-in-out;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .member-link .member-info {
   position: absolute;

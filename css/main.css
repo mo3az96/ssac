@@ -964,7 +964,6 @@ html[dir=ltr] .service-link .service-more:hover span {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  filter: grayscale(1);
   transition: all 0.3s ease-in-out;
 }
 .member-link .member-img img {

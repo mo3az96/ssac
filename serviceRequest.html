@@ -952,6 +952,11 @@
     <script src="js/svg.js"></script>
 
     <script>
+      window.requestForm = new Stepper(document.querySelector("#requestForm"), {
+        linear: false,
+        animation: true,
+      });
+
       function selectType(select) {
         var id = $(select).find(":selected").data("type");
         $(".type-content").each(function () {

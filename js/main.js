@@ -408,13 +408,6 @@ $(document).ready(function () {
       }
     });
   });
-
-  if ($("#requestForm").length > 0) {
-    window.requestForm = new Stepper(document.querySelector("#requestForm"), {
-      linear: false,
-      animation: true,
-    });
-  }
 });
 
 function mobileClick() {

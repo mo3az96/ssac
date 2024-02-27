@@ -6423,6 +6423,9 @@ html[dir=ltr] .request-body .submit-btn svg {
     font-size: 12px;
   }
 }
+.steps-header .step-trigger .number:after {
+  content: attr(data-number);
+}
 .steps-header .step-trigger:hover {
   background-color: transparent;
 }
@@ -6436,6 +6439,16 @@ html[dir=ltr] .request-body .submit-btn svg {
   border-color: #088F44;
   background-color: #088F44;
   color: #fff;
+}
+.steps-header .step:has(~ .active) .step-trigger {
+  color: #333;
+}
+.steps-header .step:has(~ .active) .step-trigger .number {
+  border-color: #088F44;
+  background-color: rgba(8, 143, 68, 0.122);
+}
+.steps-header .step:has(~ .active) .step-trigger .number:after {
+  content: url(../images/icons/check.svg);
 }
 
 .appellant-content {

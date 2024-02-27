@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/sal.css" />
     <link rel="stylesheet" href="css/select2.min.css" />
     <link rel="stylesheet" href="css/flatpicker.min.css" />
+    <link rel="stylesheet" href="css/stepper.min.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
@@ -370,83 +371,430 @@
             <div class="request-header">
               <h3 class="request-title">
                 <img src="images/icons/title.svg" />
-                حاسبة المنازعات
+                تقديم طلب
               </h3>
+              <a href="#!" class="calculator-btn">
+                <img src="images/icons/calculator.svg" class="svg" />
+                حاسبة المنازعات
+              </a>
             </div>
             <div class="request-body">
               <div class="request-form">
-                <h4 class="request-form-title">
-                  <span>1</span>
-                  بيانات المحتكم
-                </h4>
-                <form>
-                  <div class="form-group">
-                    <label class="form-label"> الاسم كامل </label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="الاسم كامل"
-                    />
-                  </div>
-                  <div class="form-grid">
-                    <div class="form-group">
-                      <label class="form-label">
-                        البريد الالكتروني
-                        <div class="field-help">
-                          <span class="help-icon">
-                            <img src="images/form/help.svg" class="svg" />
-                          </span>
-                          <div class="help-tooltip">
-                            الرجاء ادخال البريد الالكتروني بشكل صحيح، واي خطأ
-                            يتحمله مقدم الطلب.
-                          </div>
-                        </div>
-                      </label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        placeholder="أدخل البريد الالكتروني"
-                      />
+                <div id="requestForm" class="bs-stepper">
+                  <div class="steps-header" role="tablist">
+                    <div class="step" data-target="#step-1">
+                      <button
+                        type="button"
+                        class="step-trigger"
+                        role="tab"
+                        aria-controls="step-1"
+                      >
+                        <span class="number"> 1 </span>
+                        <span class="text">بيانات المحتكم</span>
+                      </button>
                     </div>
-                    <div class="form-group">
-                      <label class="form-label">
-                        رقم الجوال
-                        <div class="field-help">
-                          <span class="help-icon">
-                            <img src="images/form/help.svg" class="svg" />
-                          </span>
-                          <div class="help-tooltip">
-                            الرجاء ادخال رقم الجوال بشكل صحيح، واي خطأ يتحمله
-                            مقدم الطلب.
+                    <div class="step" data-target="#step-2">
+                      <button
+                        type="button"
+                        class="step-trigger"
+                        role="tab"
+                        aria-controls="step-2"
+                      >
+                        <span class="number"> 2 </span>
+                        <span class="text">بيانات المحتكم ضده</span>
+                      </button>
+                    </div>
+                    <div class="step" data-target="#step-3">
+                      <button
+                        type="button"
+                        class="step-trigger"
+                        role="tab"
+                        aria-controls="step-3"
+                      >
+                        <span class="number"> 3 </span>
+                        <span class="text">بيانات المنازعة</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="bs-stepper-content">
+                    <form>
+                      <div
+                        id="step-1"
+                        role="tabpanel"
+                        class="bs-stepper-pane fade"
+                      >
+                        <div class="form-group">
+                          <label class="form-label"> الاسم كامل </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="الاسم كامل"
+                          />
+                        </div>
+                        <div class="form-grid">
+                          <div class="form-group">
+                            <label class="form-label">
+                              البريد الالكتروني
+                              <div class="field-help">
+                                <span class="help-icon">
+                                  <img src="images/form/help.svg" class="svg" />
+                                </span>
+                                <div class="help-tooltip">
+                                  الرجاء ادخال البريد الالكتروني بشكل صحيح، واي
+                                  خطأ يتحمله مقدم الطلب.
+                                </div>
+                              </div>
+                            </label>
+                            <input
+                              type="email"
+                              class="form-control"
+                              placeholder="أدخل البريد الالكتروني"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label class="form-label">
+                              رقم الجوال
+                              <div class="field-help">
+                                <span class="help-icon">
+                                  <img src="images/form/help.svg" class="svg" />
+                                </span>
+                                <div class="help-tooltip">
+                                  الرجاء ادخال رقم الجوال بشكل صحيح، واي خطأ
+                                  يتحمله مقدم الطلب.
+                                </div>
+                              </div>
+                            </label>
+                            <!-- <span class="form-error">
+                              الرجاء ادخال رقم الجوال بشكل صحيح،
+                            </span> -->
+                            <div class="telephone-content">
+                              <span class="country-code">
+                                <img src="images/lang/ar.svg" />
+                                +966
+                              </span>
+                              <input
+                                type="tel"
+                                class="form-control"
+                                placeholder="أدخل رقم الجوال"
+                              />
+                            </div>
                           </div>
                         </div>
-                      </label>
-                      <!-- <span class="form-error">
-                          الرجاء ادخال رقم الجوال بشكل صحيح،
-                        </span> -->
-                      <div class="telephone-content">
-                        <span class="country-code">
-                          <img src="images/lang/ar.svg" />
-                          +966
-                        </span>
-                        <input
-                          type="tel"
-                          class="form-control"
-                          placeholder="أدخل رقم الجوال"
-                        />
+                        <div class="form-group">
+                          <label class="form-label"> صفة مقدم الطلب </label>
+                          <select
+                            class="form-control"
+                            onchange="selectType(this)"
+                          >
+                            <option value="1" data-type="himself" selected>
+                              المحتكم نفسه
+                            </option>
+                            <option value="2" data-type="representative">
+                              ممثل قانوني / محامي
+                            </option>
+                            <option value="3" data-type="representative">
+                              منسوب الجهة طالبة التحكيم
+                            </option>
+                          </select>
+                        </div>
+                        <div class="form-grid type-content" id="himself">
+                          <div class="form-group">
+                            <label class="form-label">
+                              ارفاق صورة الهوية الوطنية / الإقامة / جواز السفر
+                            </label>
+                            <div class="file-content form-control">
+                              <label>
+                                <input type="file" accept=".pdf, .png" />
+                                <div class="file-text file-placeholder">
+                                  <img
+                                    src="images/form/plusCircle.svg"
+                                    class="svg"
+                                  />
+                                  <span>
+                                    قم بسحب وإسقاط الملف هنا أو تصفح الملفات
+                                    الصيغة المقبولة PDF او PNG فقط
+                                  </span>
+                                </div>
+                                <div class="file-text file-preview">
+                                  <button class="delete" type="button">
+                                    <img
+                                      src="images/form/delete.svg"
+                                      class="svg"
+                                    />
+                                  </button>
+                                  <img src="images/form/file.svg" class="svg" />
+                                  <span></span>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="form-grid type-content"
+                          id="representative"
+                          style="display: none"
+                        >
+                          <div class="form-group">
+                            <label class="form-label">
+                              ارفاق صورة التوكيل / التفويض
+                            </label>
+                            <div class="file-content form-control">
+                              <label>
+                                <input type="file" accept=".pdf, .png" />
+                                <div class="file-text file-placeholder">
+                                  <img
+                                    src="images/form/plusCircle.svg"
+                                    class="svg"
+                                  />
+                                  <span>
+                                    قم بسحب وإسقاط الملف هنا أو تصفح الملفات
+                                    الصيغة المقبولة PDF او PNG فقط
+                                  </span>
+                                </div>
+                                <div class="file-text file-preview">
+                                  <button class="delete" type="button">
+                                    <img
+                                      src="images/form/delete.svg"
+                                      class="svg"
+                                    />
+                                  </button>
+                                  <img src="images/form/file.svg" class="svg" />
+                                  <span></span>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="form-label">
+                              ارفاق صورة رخصة مزاولة المهنة
+                            </label>
+                            <div class="file-content form-control">
+                              <label>
+                                <input type="file" accept=".pdf, .png" />
+                                <div class="file-text file-placeholder">
+                                  <img
+                                    src="images/form/plusCircle.svg"
+                                    class="svg"
+                                  />
+                                  <span>
+                                    قم بسحب وإسقاط الملف هنا أو تصفح الملفات
+                                    الصيغة المقبولة PDF او PNG فقط
+                                  </span>
+                                </div>
+                                <div class="file-text file-preview">
+                                  <button class="delete" type="button">
+                                    <img
+                                      src="images/form/delete.svg"
+                                      class="svg"
+                                    />
+                                  </button>
+                                  <img src="images/form/file.svg" class="svg" />
+                                  <span></span>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          class="submit-btn main-btn"
+                          onclick="requestForm.next()"
+                        >
+                          التالي
+                          <img src="images/icons/arrNext.svg" class="svg" />
+                        </button>
                       </div>
-                    </div>
+                      <div
+                        id="step-2"
+                        role="tabpanel"
+                        class="bs-stepper-pane fade"
+                      >
+                        <div class="appellant-content" id="appellant-1">
+                          <div class="form-group">
+                            <label class="form-label"> صفة المحتكم ضده </label>
+                            <select class="form-control">
+                              <option>--اختر--</option>
+                              <option value="1">صفة 1</option>
+                              <option value="2">صفة 2</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label class="form-label"> الاسم كامل </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="الاسم كامل"
+                            />
+                          </div>
+                          <div class="form-grid">
+                            <div class="form-group">
+                              <label class="form-label">
+                                البريد الالكتروني
+                                <div class="field-help">
+                                  <span class="help-icon">
+                                    <img
+                                      src="images/form/help.svg"
+                                      class="svg"
+                                    />
+                                  </span>
+                                  <div class="help-tooltip">
+                                    الرجاء ادخال البريد الالكتروني بشكل صحيح،
+                                    واي خطأ يتحمله مقدم الطلب.
+                                  </div>
+                                </div>
+                              </label>
+                              <input
+                                type="email"
+                                class="form-control"
+                                placeholder="أدخل البريد الالكتروني"
+                              />
+                            </div>
+                            <div class="form-group">
+                              <label class="form-label">
+                                رقم الجوال
+                                <div class="field-help">
+                                  <span class="help-icon">
+                                    <img
+                                      src="images/form/help.svg"
+                                      class="svg"
+                                    />
+                                  </span>
+                                  <div class="help-tooltip">
+                                    الرجاء ادخال رقم الجوال بشكل صحيح، واي خطأ
+                                    يتحمله مقدم الطلب.
+                                  </div>
+                                </div>
+                              </label>
+                              <!-- <span class="form-error">
+                                الرجاء ادخال رقم الجوال بشكل صحيح،
+                              </span> -->
+                              <div class="telephone-content">
+                                <span class="country-code">
+                                  <img src="images/lang/ar.svg" />
+                                  +966
+                                </span>
+                                <input
+                                  type="tel"
+                                  class="form-control"
+                                  placeholder="أدخل رقم الجوال"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button
+                          class="add-appellant"
+                          type="button"
+                          data-next="2"
+                          onclick="addAppellant(this)"
+                        >
+                          إضافة محتكم ضده اخر
+                        </button>
+                        <button
+                          type="button"
+                          class="submit-btn main-btn"
+                          onclick="requestForm.next()"
+                        >
+                          التالي
+                          <img src="images/icons/arrNext.svg" class="svg" />
+                        </button>
+                      </div>
+                      <div
+                        id="step-3"
+                        role="tabpanel"
+                        class="bs-stepper-pane fade"
+                      >
+                        <div class="form-group">
+                          <label class="form-label"> ملخص المنازعة </label>
+                          <textarea
+                            class="form-control"
+                            placeholder="ملخص المنازعة"
+                          ></textarea>
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label">
+                            قيمة المنازعة المالية
+                          </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="قيمة المنازعة المالية"
+                          />
+                        </div>
+
+                        <div class="form-grid">
+                          <div class="form-group">
+                            <label class="form-label">
+                              ارفاق إيصال دفع رسوم التسجيل
+                            </label>
+                            <div class="file-content form-control">
+                              <label>
+                                <input type="file" accept=".pdf, .png" />
+                                <div class="file-text file-placeholder">
+                                  <img
+                                    src="images/form/plusCircle.svg"
+                                    class="svg"
+                                  />
+                                  <span>
+                                    قم بسحب وإسقاط الملف هنا أو تصفح الملفات
+                                    الصيغة المقبولة PDF او PNG فقط
+                                  </span>
+                                </div>
+                                <div class="file-text file-preview">
+                                  <button class="delete" type="button">
+                                    <img
+                                      src="images/form/delete.svg"
+                                      class="svg"
+                                    />
+                                  </button>
+                                  <img src="images/form/file.svg" class="svg" />
+                                  <span></span>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="form-label"> ارفاق مستندات </label>
+                            <div class="file-content form-control">
+                              <label>
+                                <input type="file" accept=".pdf, .png" />
+                                <div class="file-text file-placeholder">
+                                  <img
+                                    src="images/form/plusCircle.svg"
+                                    class="svg"
+                                  />
+                                  <span>
+                                    قم بسحب وإسقاط الملف هنا أو تصفح الملفات
+                                    الصيغة المقبولة PDF او PNG فقط
+                                  </span>
+                                </div>
+                                <div class="file-text file-preview">
+                                  <button class="delete" type="button">
+                                    <img
+                                      src="images/form/delete.svg"
+                                      class="svg"
+                                    />
+                                  </button>
+                                  <img src="images/form/file.svg" class="svg" />
+                                  <span></span>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          class="submit-btn main-btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#successModal"
+                        >
+                          تقديم الطلب
+                        </button>
+                        <!-- <button type="submit" class="submit-btn main-btn">تقديم الطلب</button> -->
+                      </div>
+                    </form>
                   </div>
-                  <button
-                    type="button"
-                    class="submit-btn main-btn"
-                    data-bs-toggle="modal"
-                    data-bs-target="#successModal"
-                  >
-                    ارسال
-                  </button>
-                  <!-- <button type="submit" class="submit-btn main-btn">ارسال</button> -->
-                </form>
+                </div>
               </div>
             </div>
           </div>
@@ -599,7 +947,30 @@
     <script src="js/select2.min.js"></script>
     <script src="js/flatpicker.min.js"></script>
     <script src="js/ar.js"></script>
+    <script src="js/stepper.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/svg.js"></script>
+
+    <script>
+      function selectType(select) {
+        var id = $(select).find(":selected").data("type");
+        $(".type-content").each(function () {
+          if ($(this).attr("id") == id) {
+            $(this).show();
+          } else {
+            $(this).hide();
+          }
+        });
+      }
+
+      function addAppellant(btn) {
+        var next = $(btn).data("next");
+        $("#appellant-1")
+          .clone()
+          .attr("id", "appellant-" + next)
+          .insertBefore(btn);
+        $(btn).data("next", next + 1);
+      }
+    </script>
   </body>
 </html>

@@ -6253,7 +6253,7 @@ html[dir=ltr] .job-related .related-item svg {
   justify-content: space-between;
   height: 77px;
   border-bottom: 1px solid #d6d6d6;
-  padding: 0 29px;
+  padding: 0 14px;
 }
 @media (max-width: 993px) {
   .request-block .request-header {
@@ -6269,6 +6269,7 @@ html[dir=ltr] .job-related .related-item svg {
   line-height: 1.6;
   color: #1d1f1f;
   margin: 0;
+  margin-inline-start: 15px;
 }
 .request-block .request-title img {
   width: 40px;
@@ -6277,19 +6278,49 @@ html[dir=ltr] .job-related .related-item svg {
 @media (max-width: 993px) {
   .request-block .request-title {
     font-size: 18px;
+    margin: 0;
   }
   .request-block .request-title img {
     width: 30px;
     margin-inline-end: 10px;
   }
 }
+.request-block .calculator-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 164px;
+  height: 48px;
+  background-color: #088F44;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  fill: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.request-block .calculator-btn svg {
+  margin-inline-end: 8px;
+}
+.request-block .calculator-btn:hover {
+  background-color: #B9272D;
+}
+@media (max-width: 767px) {
+  .request-block .calculator-btn {
+    width: 140px;
+    height: 35px;
+  }
+  .request-block .calculator-btn svg {
+    height: 17px;
+  }
+}
 
 .request-body {
-  padding: 29px 34px 35px;
+  padding: 30px 30px 35px;
 }
 @media (max-width: 993px) {
   .request-body {
-    padding: 25px 15px;
+    padding: 25px 10px;
   }
 }
 .request-body .request-form-title {
@@ -6319,6 +6350,117 @@ html[dir=ltr] .job-related .related-item svg {
   .request-body .request-form-title {
     font-size: 20px;
   }
+}
+.request-body .submit-btn {
+  height: 56px;
+  width: auto;
+  min-width: auto;
+  border-radius: 30px;
+  padding: 0 35px;
+}
+.request-body .submit-btn svg {
+  margin-inline-start: 19px;
+}
+html[dir=ltr] .request-body .submit-btn svg {
+  transform: scaleX(-1);
+}
+.request-body .form-control:is(textarea) {
+  height: 160px;
+}
+
+.steps-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 90px;
+  background-color: #f8f8f8;
+  border: 1px solid #088F44;
+  border-radius: 10px;
+  padding: 15px 0;
+  margin-bottom: 28px;
+}
+@media (max-width: 993px) {
+  .steps-header {
+    gap: 5px;
+  }
+}
+.steps-header .step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.steps-header .step-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #666666;
+  background-color: transparent;
+  padding: 0;
+}
+@media (max-width: 993px) {
+  .steps-header .step-trigger {
+    font-size: 14px;
+  }
+}
+.steps-header .step-trigger .number {
+  width: 40px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(8, 143, 68, 0.4);
+  border-radius: 50%;
+  font-size: 14px;
+  color: #088F44;
+  font-weight: 500;
+  margin-inline-end: 10px;
+}
+@media (max-width: 993px) {
+  .steps-header .step-trigger .number {
+    width: 30px;
+    font-size: 12px;
+  }
+}
+.steps-header .step-trigger:hover {
+  background-color: transparent;
+}
+.steps-header .step-trigger:focus {
+  color: #666666;
+}
+.steps-header .active .step-trigger {
+  color: #088F44;
+}
+.steps-header .active .step-trigger .number {
+  border-color: #088F44;
+  background-color: #088F44;
+  color: #fff;
+}
+
+.appellant-content {
+  padding: 20px;
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.add-appellant {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #088F44;
+  border: 1px dashed #088F44;
+  transition: all 0.3s ease-in-out;
+}
+.add-appellant:hover {
+  background-color: #088F44;
+  color: #fff;
 }
 
 .arbitratorsPage-main {

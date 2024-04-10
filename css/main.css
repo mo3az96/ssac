@@ -6456,6 +6456,10 @@ html[dir=ltr] .request-body .submit-btn svg {
   border: 1px solid #d6d6d6;
   border-radius: 10px;
   margin-bottom: 15px;
+  position: relative;
+}
+.appellant-content:has(.delete-appellant) {
+  padding-top: 80px;
 }
 
 .add-appellant {
@@ -6474,6 +6478,23 @@ html[dir=ltr] .request-body .submit-btn svg {
 .add-appellant:hover {
   background-color: #088F44;
   color: #fff;
+}
+
+.delete-appellant {
+  position: absolute;
+  top: 20px;
+  inset-inline-end: 20px;
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f55157;
+  transition: all 0.3s ease-in-out;
+}
+.delete-appellant:hover {
+  background-color: #f00;
 }
 
 .arbitratorsPage-main {

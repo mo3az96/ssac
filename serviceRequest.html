@@ -1068,9 +1068,18 @@
         var next = $(btn).data("next");
         $("#appellant-1")
           .clone()
+          .append(
+            "<button class='delete-appellant' onclick='deleteAppellant(" +
+              next +
+              ")'><img src='images/icons/delete.svg' /></button>"
+          )
           .attr("id", "appellant-" + next)
           .insertBefore(btn);
         $(btn).data("next", next + 1);
+      }
+      function deleteAppellant(id) {
+        var id = "#appellant-" + id;
+        $(id).remove();
       }
     </script>
   </body>

@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
     />
-    <title>SSAC | الشكاوى والمقترحات</title>
+    <title>SSAC | منازعة رقم A23452</title>
     <link rel="shortcut icon" type="img/png" href="images/favicon.png" />
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/sal.css" />
     <link rel="stylesheet" href="css/select2.min.css" />
     <link rel="stylesheet" href="css/flatpicker.min.css" />
+    <link rel="stylesheet" href="css/stepper.min.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
@@ -289,9 +290,26 @@
                 <img src="images/icons/search.svg" class="svg" />
               </a>
               <div class="user-content sublist-content">
-                <a href="authenticationLogin.html" class="header-icon user-icon">
+                <a role="button" class="header-icon user-icon sublist-btn">
                   <img src="images/icons/user.svg" class="svg" />
+                  <span class="user-name"> عبدالله محمد </span>
+                  <i class="arrow">
+                    <img src="images/icons/arrNav.svg" class="svg" />
+                  </i>
                 </a>
+                <div class="sublist-body user-list">
+                  <a href="accountProfile.html" class="sublist-item">
+                    البيانات الشخصية
+                  </a>
+                  <a href="accountOrders.html" class="sublist-item"> طلباتي </a>
+                  <a href="accountCourses.html" class="sublist-item">
+                    دوراتي
+                  </a>
+                  <a href="accountAppointments.html" class="sublist-item">
+                    مواعيدي بالمركز
+                  </a>
+                  <a href="index.html" class="sublist-item"> تسجيل خروج </a>
+                </div>
               </div>
               <div class="lang-content sublist-content">
                 <a role="button" class="lang-btn sublist-btn">
@@ -329,148 +347,24 @@
             </a>
           </li>
           <li>
-            <a role="button"> اتصل بالمركز </a>
+            <a role="button"> المنازعات والأحكام </a>
           </li>
           <li>
-            <a role="button">الشكاوى والمقترحات</a>
+            <a role="button"> سير المنازعات </a>
+          </li>
+          <li>
+            <a role="button"> منازعة رقم A23452 </a>
           </li>
         </ul>
       </div>
     </section>
     <!-- End Breadcrumb -->
 
-    <!-- Start Complaints And Suggestions Page -->
-    <section class="complaints-page">
-      <div class="page-main complaints-main">
-        <div class="container">
-          <div class="section-head">
-            <h2 class="section-title">
-              <img src="images/icons/title.svg" />
-              الشكاوى والمقترحات
-            </h2>
-            <p class="section-description">
-              تسمح للأفراد بالتواصل مع المركز وتقديم ملاحظاتهم بشكل مباشر بغرض
-              تحسين الخدمات أو حل المشكلات
-            </p>
-          </div>
-          <div class="complaints-content">
-            <div class="contact-methods complaints-methods">
-              <div class="contact-method">
-                <div class="method-icon">
-                  <img src="images/icons/call.svg" />
-                </div>
-                <div class="method-text">
-                  <span class="title"> رقم الجوال </span>
-                  <strong class="value en">
-                    <a href="tel:0118108968"> 011-810-8968 </a>
-                  </strong>
-                </div>
-              </div>
-              <div class="contact-method">
-                <div class="method-icon">
-                  <img src="images/icons/mail.svg" />
-                </div>
-                <div class="method-text">
-                  <span class="title"> البريد الإلكتروني </span>
-                  <strong class="value en">
-                    <a href="mailto:reservations@ssac.sa">
-                      reservations@ssac.sa
-                    </a>
-                  </strong>
-                </div>
-              </div>
-            </div>
-            <div class="complaints-form">
-              <form>
-                <div class="form-grid">
-                  <div class="form-col">
-                    <div class="form-group">
-                      <label class="form-label"> الاسم كامل </label>
-                      <!-- <span class="form-error"> الاسم كامل خطأ </span> -->
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="الاسم كامل"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label"> البريد الالكتروني </label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        placeholder="أدخل البريد الالكتروني"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">
-                        رقم الجوال
-                        <div class="field-help">
-                          <span class="help-icon">
-                            <img src="images/form/help.svg" class="svg" />
-                          </span>
-                          <div class="help-tooltip">
-                            الرجاء ادخال رقم الجوال بشكل صحيح، واي خطأ يتحمله
-                            مقدم الطلب.
-                          </div>
-                        </div>
-                      </label>
-                      <!-- <span class="form-error">
-                      الرجاء ادخال رقم الجوال بشكل صحيح،
-                    </span> -->
-                      <div class="telephone-content">
-                        <span class="country-code">
-                          <img src="images/lang/ar.svg" />
-                          +966
-                        </span>
-                        <input
-                          type="tel"
-                          class="form-control"
-                          placeholder="أدخل رقم الجوال"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-col">
-                    <div class="form-group">
-                      <label class="form-label"> نوع الرسالة </label>
-                      <!-- <span class="form-error"> الموضوع مطلوب </span> -->
-                      <select class="form-control">
-                        <option>--اختر--</option>
-                        <option value="1">اقتراح</option>
-                        <option value="2">شكوى</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label"> الرسالة </label>
-                      <textarea
-                        class="form-control"
-                        placeholder="الرسالة"
-                      ></textarea>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="submit-btn main-btn"
-                  data-bs-toggle="modal"
-                  data-bs-target="#successModal"
-                >
-                  ارسال
-                </button>
-                <!-- <a
-                  href="complaintsAndSuggestionsLogin.html"
-                  class="submit-btn main-btn"
-                >
-                  ارسال
-                </a> -->
-                <!-- <button type="submit" class="submit-btn main-btn">ارسال</button> -->
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- Start Service Dispute Page -->
+    <section class="dispute-page">
+      
     </section>
-    <!-- End Complaints And Suggestions Page -->
+    <!-- End Service Dispute Page -->
 
     <!-- Start Footer -->
     <footer style="background-image: url(images/background/footerAnimated.svg)">
@@ -583,29 +477,6 @@
     </footer>
     <!-- End Footer -->
 
-    <!-- Start Modal -->
-    <div
-      class="modal fade success-modal"
-      id="successModal"
-      tabindex="-1"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="success-icon">
-              <img src="images/icons/success.svg" />
-            </div>
-            <h3 class="success-title">شكرا لك، تم الارسال بنجاح</h3>
-            <a href="complaintsAndSuggestionsLogin.html" class="main-btn success-btn"> حسنا </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Modal -->
-
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -616,6 +487,7 @@
     <script src="js/select2.min.js"></script>
     <script src="js/flatpicker.min.js"></script>
     <script src="js/ar.js"></script>
+    <script src="js/stepper.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/svg.js"></script>
   </body>

@@ -9217,7 +9217,7 @@ html[dir=ltr] .otp-inputs .otp-field::placeholder {
 }
 .dispute-item .dispute-information {
   padding: 25px 20px 20px;
-  border-bottom: 1px solid #f8f8f8;
+  border-bottom: 1px solid #EEEEEE;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -9273,7 +9273,7 @@ html[dir=ltr] .otp-inputs .otp-field::placeholder {
 }
 .dispute-item .dispute-parties {
   padding: 15px 20px 20px;
-  border-bottom: 1px solid #f8f8f8;
+  border-bottom: 1px solid #EEEEEE;
 }
 .dispute-item .parties-title {
   font-size: inherit;
@@ -9303,4 +9303,190 @@ html[dir=ltr] .otp-inputs .otp-field::placeholder {
 .dispute-item .action-btn {
   height: 40px;
   min-width: 110px;
+}
+
+.ordersPage-main {
+  padding: 50px 0 20px;
+  width: 100%;
+  overflow: hidden;
+}
+@media (max-width: 993px) {
+  .ordersPage-main {
+    padding: 40px 0 30px;
+  }
+}
+
+.orders-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 30px;
+}
+@media (max-width: 1199px) {
+  .orders-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 993px) {
+  .orders-list {
+    gap: 20px 15px;
+  }
+}
+@media (max-width: 767px) {
+  .orders-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.order-item {
+  border-radius: 15px;
+  border: 1px solid #f8f8f8;
+  background-color: #fff;
+  box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.0588235294);
+  font-size: 16px;
+  position: relative;
+}
+.order-item .order-information {
+  padding: 30px 20px 16px;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.order-item .information-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: 1.5;
+  gap: 10px 5px;
+}
+.order-item .title {
+  color: #1d1f1f;
+}
+.order-item .value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #666;
+  fill: #666;
+}
+.order-item .dispute-number {
+  font-weight: 500;
+  color: #088F44;
+}
+.order-item .dispute-number.undefined {
+  color: #a5a5a5;
+}
+.order-item .stage {
+  width: 100%;
+  background-color: rgba(8, 143, 68, 0.1);
+  padding: 10px 10px 12px;
+  font-size: 14px;
+  color: #088F44;
+  font-weight: 400;
+  line-height: 1.858;
+  border-radius: 10px;
+}
+.order-item .order-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eeeeee;
+  gap: 5px;
+  line-height: 1.5;
+  font-size: inherit;
+}
+.order-item .status-title {
+  color: #1d1f1f;
+  font-weight: 500;
+}
+.order-item .status-value {
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  --color: $main;
+  color: var(--color);
+}
+.order-item .status-value::before {
+  content: "";
+  width: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: block;
+  flex-shrink: 0;
+  background-color: var(--color);
+}
+.order-item .status-value.processing {
+  --color: #a5a5a5;
+}
+.order-item .status-value.inprogress {
+  --color: #5196f3;
+}
+.order-item .status-value.waiting {
+  --color: #ffaf44;
+}
+.order-item .status-value.closed {
+  --color: #ffaf44;
+}
+.order-item .status-value.hold {
+  --color: #a5a5a5;
+}
+.order-item .status-value.canceled {
+  --color: #b9272d;
+}
+.order-item .status-value.rejected {
+  --color: #b9272d;
+}
+.order-item .status-value.completed {
+  --color: $main;
+}
+.order-item .order-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 15px 15px;
+}
+.order-item .action-btn {
+  height: 40px;
+  min-width: 110px;
+}
+.order-item .order-bell {
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  stroke: #fff;
+  fill: #fff;
+  color: #fff;
+  background-color: #b9272d;
+  transition: all 0.3s ease-in-out;
+}
+.order-item .order-bell:hover {
+  background-color: #088F44;
+}
+html[dir=ltr] .order-item .order-bell {
+  transform: translate(50%, -50%);
+}
+@media (max-width: 1199px) {
+  .order-item .order-bell {
+    transform: none;
+    top: -10px;
+    inset-inline-end: -10px;
+  }
+  html[dir=ltr] .order-item .order-bell {
+    transform: none;
+  }
 }/*# sourceMappingURL=main.css.map */

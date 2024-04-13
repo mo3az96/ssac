@@ -9546,6 +9546,7 @@ html[dir=ltr] .otp-inputs .otp-field::placeholder {
 }
 .singleDispute-parties .party-item {
   border: 1px solid #d6d6d6;
+  background-color: #fff;
   border-top: none;
   display: flex;
   align-items: center;
@@ -9577,6 +9578,49 @@ html[dir=ltr] .otp-inputs .otp-field::placeholder {
   font-weight: 400;
   color: #1d1f1f;
   margin: 0;
+}
+
+.singleDispute-files {
+  padding-top: 10px;
+}
+.singleDispute-files .files-title {
+  font-size: 36px;
+  color: #1d1f1f;
+  font-weight: 700;
+  line-height: 1.2223;
+  margin-bottom: 24px;
+}
+@media (max-width: 767px) {
+  .singleDispute-files .files-title {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+.singleDispute-files .framed-files {
+  border: 1px solid #088F44;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 30px;
+}
+@media (max-width: 767px) {
+  .singleDispute-files .framed-files {
+    padding: 20px;
+    border-radius: 20px;
+  }
+}
+.singleDispute-files .title {
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+  line-height: 2.25;
+  height: auto;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .singleDispute-files .title {
+    font-size: 16px;
+    line-height: 1.875;
+  }
 }
 
 .ordersPage-main {

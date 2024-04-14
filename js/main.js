@@ -466,6 +466,15 @@ function mobileClick() {
   } else {
     $(".footer-title").off("click");
   }
+
+  /************************************ Order Accordion ************************************/
+  $(".accordion-block .block-title").click(function (e) {
+    if (e.isDefaultPrevented()) return;
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).toggleClass("active");
+    $(this).siblings().slideToggle(300);
+  });
 }
 
 function copyToClipboard(text) {

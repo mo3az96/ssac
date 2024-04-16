@@ -9400,6 +9400,16 @@ html[dir=ltr] .otp-inputs .otp-field::placeholder {
 .status-bar .status-item .mark img {
   display: none;
 }
+@media (max-width: 993px) {
+  .status-bar .status-item .mark {
+    margin-inline-end: 7px;
+  }
+}
+@media (max-width: 767px) {
+  .status-bar .status-item .mark {
+    margin-inline-end: 10px;
+  }
+}
 .status-bar .status-item.processing .mark {
   border: 2px solid #d6d6d6;
   background-color: transparent;
@@ -9427,7 +9437,7 @@ html[dir=ltr] .otp-inputs .otp-field::placeholder {
   height: 4px;
   border-radius: 2px;
   background-color: #d6d6d6;
-  width: 170px;
+  width: 120px;
   margin: 0 20px;
 }
 @media (max-width: 1199px) {
@@ -9464,13 +9474,17 @@ html[dir=ltr] .otp-inputs .otp-field::placeholder {
   display: none;
 }
 .status-bar:has(.done) .status-item::after {
-  width: 160px;
+  width: 122px;
+  margin: 0 15px;
 }
 .status-bar:has(.done + .done) .status-item::after {
-  width: 150px;
+  width: 115px;
 }
 .status-bar:has(.done + .done + .done) .status-item::after {
-  width: 140px;
+  width: 107px;
+}
+.status-bar:has(.done + .done + .done + .done) .status-item::after {
+  width: 100px;
 }
 
 .singleDispute-description {

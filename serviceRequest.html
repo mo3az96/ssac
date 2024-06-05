@@ -1064,17 +1064,31 @@
         });
       }
 
+      var elementHtml = $("#appellant-1").html();
+      localStorage.setItem("savedElement", elementHtml);
+
       function addAppellant(btn) {
         var next = $(btn).data("next");
-        $("#appellant-1")
-          .clone()
-          .append(
-            "<button class='delete-appellant' onclick='deleteAppellant(" +
-              next +
-              ")'><img src='images/icons/delete.svg' /></button>"
-          )
-          .attr("id", "appellant-" + next)
-          .insertBefore(btn);
+        var savedElementHtml = localStorage.getItem("savedElement");
+        $(btn).before(
+          '<div class="appellant-content" id="appellant-' +
+            next +
+            '">' +
+            savedElementHtml +
+            "</div>"
+        );
+        $("#appellant-" + next).append(
+          "<button class='delete-appellant' onclick='deleteAppellant(" +
+            next +
+            ")'><img src='images/icons/delete.svg' /></button>"
+        );
+        if ($(window).width() >= 992) {
+          $("select").select2({
+            minimumResultsForSearch: Infinity,
+            width: "100%",
+          });
+        }
+        toSvg();
         $(btn).data("next", next + 1);
       }
       function deleteAppellant(id) {
